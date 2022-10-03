@@ -1,4 +1,4 @@
-    /*****************************************************************
+/*****************************************************************
     *   CSS reset from https://piccalil.li/blog/a-modern-css-reset/ 
     *****************************************************************/
 
@@ -24,8 +24,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
@@ -39,6 +39,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  background-color: rgb(246, 246, 246);
 }
 
 /* A elements that don't have a class get default styles */
@@ -64,9 +65,9 @@ select {
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
-   scroll-behavior: auto;
+    scroll-behavior: auto;
   }
-  
+
   *,
   *::before,
   *::after {
@@ -77,7 +78,52 @@ select {
   }
 }
 
-    /*****************************************************************
+/*****************************************************************
     *   Our custom styling for the website
     *****************************************************************/
 
+.headerText {
+  text-align: center;
+  font-family: "Helvetica", sans-serif;
+  margin: 3vw;
+  font-size: 3vh;
+}
+
+.testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 3vw;
+  font-family: "Georgia", serif;
+}
+
+.testimonialCard {
+  flex: 1 1 auto;
+  margin: 10px;
+  padding: 40px;
+
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.063) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  border-radius: 20px;
+  width: 200px;
+
+  text-align: center;
+}
+
+.testimonialCard > img {
+  text-align: center;
+  margin: auto;
+  padding-top: 30px;
+}
+
+.testimonialCard > h1 {
+  font-size: 2.7vh;
+}
+
+.testimonialCard > h3 {
+  padding-top: 30px;
+  font-family: "Helvetica", sans-serif;
+  font-weight: normal;
+  font-size: 2.3vh;
+}
