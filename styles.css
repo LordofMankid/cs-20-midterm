@@ -79,14 +79,72 @@ select {
 }
 
 /*****************************************************************
-    *   Our custom styling for the website
-    *****************************************************************/
+              Our custom styling for the website
+*****************************************************************/
+
+.header {
+  color: black;
+  background-color: white;
+  height: 5vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  place-items: center;
+  font-family: "Helvetica", sans-serif;
+}
+
+.nav-links > a {
+  margin-inline: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.nav-links > a:visited {
+  color: inherit;
+}
+
+.nav-links > a:hover {
+  color: grey;
+}
+
+.cart > img {
+  width: 20px;
+}
 
 .headerText {
   text-align: center;
   font-family: "Helvetica", sans-serif;
-  margin-block: 3vw;
+  margin-block: max(6vh, 3vw);
+  margin-inline: 5vw;
   font-size: 3vh;
+}
+
+.hero-img {
+  background-image: url('./assets/hero-image.jpg');
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.hero-text {
+  color: white;
+  text-align: center;
+  font-family: "Helvetica", sans-serif;
+  text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.hero-text > h2 {
+  color: white;
+  font-size: max(6vh, 10vw);
+}
+
+.hero-text > h3 {
+  color: white;
+  font-size: max(3vh, 5vw);
+  font-weight: normal;
 }
 
 .headerSubtext {
@@ -97,6 +155,7 @@ select {
 
   /* make it closer to the headerText*/
   margin-top: -2.5vw; 
+  margin-inline: 5vw;
 }
 
 .testimonials {
@@ -154,4 +213,13 @@ select {
   font-weight: normal;
   font-size: 1vh;
   padding: 20px;
+}
+
+.footer-icons {
+  display: flex;
+}
+
+.footer-icons > img {
+  width: 20px;
+  margin: 5px;
 }
