@@ -38,7 +38,6 @@ html:focus-within {
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
   background-color: rgb(246, 246, 246);
 }
 
@@ -81,6 +80,13 @@ select {
 /*****************************************************************
               Our custom styling for the website
 *****************************************************************/
+
+body {
+  position: relative;
+  line-height: 1.2;
+  min-height: 100vh;
+  padding-bottom: 20vh;
+}
 
 .header {
   color: black;
@@ -201,6 +207,8 @@ select {
 .footer {
   height: 20vh;
   width: 100vw;
+  position: absolute;
+  bottom: 0;
   background-color: white;
   display: flex;
   justify-content: space-between;
