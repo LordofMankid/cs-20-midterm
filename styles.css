@@ -147,7 +147,7 @@ body {
   background-image: url('./assets/hero-image.jpg');
   background-size: cover;
   width: 100vw;
-  height: 50vh;
+  height: 53vh;
   display: grid;
   place-items: center;
 }
@@ -193,7 +193,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   margin: 3vw;
-  margin-top: 10vw;
+  margin-top: 10vw - 10vh;
   font-family: "Georgia", serif;
 }
 
@@ -201,6 +201,7 @@ body {
   flex: 1 1 auto;
   margin-inline: 50px;
   margin-bottom: 50px;
+  margin-top: 10vh;
   padding: 40px;
 
   background-color: #10315B;
@@ -229,14 +230,45 @@ body {
   font-size: 2.3vh;
 }
 
+.testimonial {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-inline: 15vw;
+  margin-block: 5vh;
+}
+
+.testimonial > img {
+  width: 12%;
+  height: 12%;
+}
+
+.testimonialText > h1 {
+  text-align: right;
+}
+
+.testimonialText > h2 {
+  text-align: right;
+  font-weight: normal;
+  margin-top: 15px;
+}
+
+.testimonials > hr {
+  margin-inline: 8vw;
+  border: 0.5px solid rgb(206, 206, 206);
+}
+
 .footer {
-  height: 20vh;
   width: 100vw;
   position: absolute;
+  padding: 50px;
   bottom: 0;
-  background-color: white;
-  display: flex;
-  justify-content: space-between;
+  background-color: #10315B;
+}
+
+.footer > hr {
+  margin-inline: 5vw;
+  border: 0.5px solid white;
 }
 
 .footer-box {
@@ -256,4 +288,37 @@ body {
 .footer-icons > img {
   width: 20px;
   margin: 5px;
+}
+
+.mainFooter {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footerCol {
+  margin-inline: 5vw;
+  margin-block: 2vw;
+  color: white;
+  text-align: center;
+}
+
+.footerCol > h1 {
+  font-size: 24px;
+}
+
+.footerCol > h2 {
+  font-size: 18px;
+  font-weight: normal;
+  margin-block: 10px;
+}
+
+.bottomFooter {
+  display: flex;
+  margin-inline: 5vw;
+  justify-content: space-between;
+}
+
+.bottomFooter > h3 {
+  color: white;
+  font-weight: normal;
 }
