@@ -89,9 +89,9 @@ body {
 }
 
 .header {
-  color: black;
-  background-color: white;
-  height: 5vh;
+  color: white;
+  background-color: #10315B;
+  height: 6vh;
   width: 100vw;
   display: flex;
   justify-content: space-between;
@@ -104,6 +104,7 @@ body {
   margin-inline: 10px;
   text-decoration: none;
   color: black;
+  transition: 0.2s;
 }
 
 .nav-links > a:visited {
@@ -111,13 +112,17 @@ body {
 }
 
 .nav-links > a:hover {
-  color: grey;
+  color: #B1868C;
+}
+
+.logo > a {
+  color: white;
 }
 
 .cart > img {
   width: 20px;
+  filter: invert(100%);
 }
-
 
 .headerText {
   text-align: center;
@@ -125,33 +130,6 @@ body {
   margin-block: max(6vh, 3vw);
   margin-inline: 5vw;
   font-size: 3vh;
-}
-
-.hero-img {
-  background-image: url('./assets/hero-image.jpg');
-  background-size: cover;
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  place-items: center;
-}
-
-.hero-text {
-  color: white;
-  text-align: center;
-  font-family: "Helvetica", sans-serif;
-  text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-.hero-text > h2 {
-  color: white;
-  font-size: max(6vh, 10vw);
-}
-
-.hero-text > h3 {
-  color: white;
-  font-size: max(3vh, 5vw);
-  font-weight: normal;
 }
 
 .headerSubtext {
@@ -165,39 +143,86 @@ body {
   margin-inline: 5vw;
 }
 
-.testimonials {
+.hero-img {
+  background-image: url('./assets/hero-image.jpg');
+  background-size: cover;
+  width: 100vw;
+  height: 50vh;
+  display: grid;
+  place-items: center;
+}
+
+.hero-text {
+  color: white;
+  text-align: center;
+  font-family: "Helvetica", sans-serif;
+}
+
+.hero-text > h2 {
+  color: white;
+  font-size: max(4vh, 8vw);
+}
+
+.hero-text > h3 {
+  color: white;
+  font-size: max(2vh, 3vw);
+  font-weight: normal;
+}
+
+.mission {
+  background-color: #B1868C;
+  width: 100vw;
+  text-align: center;
+  padding-block: 100px;
+  color: white;
+}
+
+.missionHeader {
+  padding: 20px;
+  font-size: 2.5vh;
+}
+
+.missionText {
+  padding-bottom: 20px;
+  font-size: 4vh;
+  margin-inline: 20vw;
+}
+
+.cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: 3vw;
+  margin-top: 10vw;
   font-family: "Georgia", serif;
 }
 
-.testimonialCard {
+.card {
   flex: 1 1 auto;
-  margin: 10px;
+  margin-inline: 50px;
+  margin-bottom: 50px;
   padding: 40px;
 
-  background-color: rgb(255, 255, 255);
-  box-shadow: rgba(0, 0, 0, 0.063) 0px 20px 25px -5px,
-    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-  border-radius: 20px;
+  background-color: #10315B;
   width: 200px;
+  color: white;
 
   text-align: center;
 }
 
-.testimonialCard > img {
+.card > img {
   text-align: center;
   margin: auto;
-  padding-top: 30px;
+  margin-top: -120px;
+  margin-bottom: 30px;
+  width: 80%;
 }
 
-.testimonialCard > h1 {
+.card > h1 {
   font-size: 2.7vh;
 }
 
-.testimonialCard > h3 {
+.card > h3 {
   padding-top: 30px;
   font-family: "Helvetica", sans-serif;
   font-weight: normal;
