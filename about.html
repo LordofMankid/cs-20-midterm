@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>About Us</title>
+    <style>
+        .hero-img {
+            background: url('./assets/hero-images/about-us.jpg') rgba(0, 0, 0, 0.3);
+            background-position-y: 70%;
+            background-size:cover;
+            background-blend-mode: multiply;
+        }
+    </style>
 </head>
 <body>
     
     <!-- jquery library -->
     <script src="https://code.jquery.com/jquery-3.6.1.js"
         integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous">
-    </script>
-
-    <!-- adjust hero image -->
-    <script>
-        $(document).ready(function () {
-            console.log('hello');
-            $(".hero-img").css('background-image', "url('./assets/hero-images/about-us.jpg')");
-        });
     </script>
 
     <!-- header -->
