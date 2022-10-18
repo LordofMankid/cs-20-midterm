@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/contacts.css">
     <title>Contact Us</title>
+
+    <style>
+        .hero-img {
+            background: url('./assets/hero-images/contact-us.jpg') rgba(0, 0, 0, 0.3);
+            background-position-y: 70%;
+            background-size:cover;
+            background-blend-mode: multiply;
+        }
+    </style>
 </head>
-<body>
+
+<body>    
+    <!-- jquery library -->
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous">
+        </script>
+
     <!-- header -->
     <div class="header">
         <div class="logo">
@@ -21,13 +38,53 @@
         </div>
         <div class="cart">
             <a href="shopping.html" class="cart">
-                <img src="./assets/icons/shopping_cart.png"/>
+                <img src="./assets/icons/shopping_cart.png" />
             </a>
         </div>
     </div>
 
-    <h1 class="headerText">Contact Us</h1>
-    <h2 class="headerSubtext">Placeholder</h2>
+    <!-- hero image with text -->
+    <div class="hero-img">
+        <div class="hero-text">
+            <h2>Contact Us</h2>
+        </div>
+    </div>
+
+    <!-- form header -->
+    <div class="form-header"> 
+        <h1> Get in Touch</h1>
+        <hr> 
+    </div>
+
+    <!-- Form -->
+        <form class="contact-form">
+            <div class="form-input">
+                <label for="name">Your Name</label>
+                <input type="text" name="name" id="contact-name">
+            </div>
+
+            <div class="form-input">
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="contact-email">
+            </div>
+
+            <div class="form-input">
+                <label for="phone">Phone Number</label>
+                <input type="text" name="phone" id="contact-phone">
+            </div>
+
+            <div class="form-input">
+                <label for="subject">Subject</label>
+                <input type="text" name="subject" id="contact-subject">
+            </div>
+
+            <div class="message">
+                <label for="message">Message</label>
+                <textarea name="message" id="contact-message" rows="10"> </textarea>
+            </div>
+
+            <input type="submit" value="Send Message">            
+        </form>
 
     <!-- footer -->
     <div class="footer">
@@ -74,4 +131,5 @@
         </div>
     </div>
 </body>
+
 </html>

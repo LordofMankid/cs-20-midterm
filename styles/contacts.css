@@ -1,0 +1,86 @@
+/*//////////////////////////////////////////////
+//
+//           CONTACT HEADER STYLING
+//
+/////////////////////////////////////////////*/
+
+
+
+.form-header {
+    padding-top: 3.5vw;
+    padding-bottom: 2.5vw;
+}
+
+.form-header > hr {
+    margin-inline: 20vw;
+    border: 0.5px solid #19457A;
+}
+
+.form-header > h1 {
+    margin-inline: 20vw;
+    color: #19457A;
+}
+
+/*//////////////////////////////////////////////
+//
+//            CONTACT FORM STYLING
+//
+/////////////////////////////////////////////*/
+
+.contact-form {
+    margin-inline: 20vw;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 5%;
+}
+
+.contact-form > .form-input {
+    flex: 2 1 45%;
+}
+
+.contact-form > .message {
+    flex: 2 1 100%;
+}
+
+.contact-form label {
+    font-family: "Helvetica", sans-serif;
+    color: #10315B;
+    padding-bottom: 10px;
+}
+
+.form-input {
+    padding: 10px 0 10px 0;
+    display:grid;
+}
+
+.form-input > input, textarea {
+    border: 2px solid #3F70AA;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.message {
+    padding: 10 0 10 0px;
+    display:grid;
+}
+
+.message > textarea {
+    line-height: 2.5vh;
+    font-size:2.5vh;
+}
+
+input[type=submit] {
+    border-radius: 3px;
+    padding: 10px 5vw 10px 5vw;
+    margin: 3vh 0 3vh auto;
+    text-align: center;
+    font-size: 3vh;
+    transition: 0.3s;
+    color: white;
+    background-color:#19457A;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(63, 112, 170);
+}
