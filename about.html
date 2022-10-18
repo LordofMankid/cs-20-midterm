@@ -8,6 +8,20 @@
     <title>About Us</title>
 </head>
 <body>
+    
+    <!-- jquery library -->
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous">
+    </script>
+
+    <!-- adjust hero image -->
+    <script>
+        $(document).ready(function () {
+            console.log('hello');
+            $(".hero-img").css('background-image', "url('./assets/hero-images/about-us.jpg')");
+        });
+    </script>
+
     <!-- header -->
     <div class="header">
         <div class="logo">
@@ -28,6 +42,14 @@
 
     <h1 class="headerText">About Us</h1>
     <h2 class="headerSubtext">Placeholder</h2>
+
+      <!-- hero image with text -->
+      <div class="hero-img";>
+        <div class="hero-text">
+            <h2>Overflo.</h2>
+            <h3>beyond the flush</h3>
+        </div>
+    </div>
 
     <!-- footer -->
     <div class="footer">
