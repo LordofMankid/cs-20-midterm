@@ -319,3 +319,96 @@ body {
   color: white;
   font-weight: normal;
 }
+
+/* about us page */
+
+.about-us {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+  margin-inline: 20vw;
+  margin-block: 100px;
+}
+
+.about-us > img {
+  width: 40%;
+}
+
+.about-us-text {
+  margin: auto;
+}
+
+.about-us-text > h1 {
+  margin-block: 20px;
+}
+
+.about-us-text > h2 {
+  font-weight: normal;
+}
+
+/* values section */
+
+.values {
+  display: flex;
+  justify-content: space-between;
+  margin-inline: 20vw;
+  margin-block: 100px;
+}
+
+.values > img {
+  width: 50%;
+}
+
+.values-text {
+  width: 492px;
+  height: 470px;
+  background-color:#10315B;
+  padding: 40px;
+  color: white;
+}
+
+.values-text > hr {
+  margin-right: 200px;
+  margin-bottom: 100px;
+}
+
+.values-text > h2 {
+  margin-bottom: 15px;
+  font-weight: normal;
+}
+
+.our-team {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-inline: 20vw;
+  font-family: "Georgia", serif;
+}
+
+.teamCard {
+  flex: 1 1 auto;
+  margin-inline: 5px;
+  margin-block: 50px;
+  padding: 40px;
+
+  background-color: #10315B;
+  width: 200px;
+  color: white;
+
+  text-align: center;
+}
+
+.teamCard > img {
+  margin-bottom: 50px;
+}
+
+.teamCard > h1 {
+  font-size: 2.7vh;
+}
+
+.teamCard > h3 {
+  padding-top: 15px;
+  font-family: "Helvetica", sans-serif;
+  font-weight: normal;
+  font-size: 2.3vh;
+}
