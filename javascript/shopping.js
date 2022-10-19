@@ -4,6 +4,7 @@ $(document).ready(function () {
 
     adjustQuantities();
 
+    console.log(sessionStorage.getItem("1"));
 });
 
 
@@ -18,11 +19,14 @@ function addItem() {
 
         var item_price = element.parent().siblings(".item-price").text();
         var total_price = element.parent().siblings(".total-item-price");
-
         total_price.text("$" + calculateItemPrice(item_price, itemQuantity).toFixed(2));
 
     });
 
+
+}
+
+function deleteItem() {
 
 }
 
@@ -49,7 +53,13 @@ function subtractItem() {
 
         var item_price = element.parent().siblings(".item-price").text();
         var total_price = element.parent().siblings(".total-item-price");
+        
 
+
+        if(itemQuantity < 0) {
+            console.log("hi");
+            $(this).parent().parent().hide();   
+        }
         total_price.text("$" + calculateItemPrice(item_price, itemQuantity));
 
     });
