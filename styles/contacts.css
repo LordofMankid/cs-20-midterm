@@ -79,6 +79,8 @@ input[type=submit] {
     transition: 0.3s;
     color: white;
     background-color:#19457A;
+    cursor: pointer;
+    border: 0px solid black;
 }
 
 input[type=submit]:hover {

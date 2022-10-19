@@ -145,6 +145,7 @@
     border-radius: 5px;
     background-color: #3F70AA;
     transition: 0.1s;
+    cursor: pointer;
 }
 
 button > img{
