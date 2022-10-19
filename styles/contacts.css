@@ -66,8 +66,8 @@
 }
 
 .message > textarea {
-    line-height: 2.5vh;
-    font-size:2.5vh;
+    line-height: 1.5vh;
+    font-size:1.5vh;
 }
 
 input[type=submit] {

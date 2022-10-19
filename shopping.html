@@ -11,6 +11,10 @@
 </head>
 
 <body>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="./javascript/shopping.js"></script>
+
     <!-- header -->
     <div class="header">
         <div class="logo">
@@ -33,47 +37,116 @@
     <div class="order-info">
         <!-- Your Cart -->
         <div class="cart-header">
-            <h2> Your Cart</h2>
-            <hr>
-        </div>
-
-        <!-- Summary -->
-        <div class="summary-header">
-            <h2 id="header">Summary</h2>
+            <h1> Your Cart</h1>
             <hr>
         </div>
 
         <div class="item-list">
-            <div class="item">
+            <div class="item" id="item1">
                 <div class="img-description">
                     <img />
                     <div class="item-description">
-                        <h5 name="item-name">placeholder</h5>
-                        <p name="item-type">placeholder</p>
+                        <h2 name="item-name">placeholder</h5>
+                            <p name="item-type">placeholder</p>
                     </div>
                 </div>
 
-                <div class="item-price">$1000</div>
+                <div class="item-price">$5000</div>
 
-                <form class="add-item">
-                    <button class="subtract"></button>
-                    <p class="itemQuantity">0</p>
-                    <button class="add"></button>
-                </form>
+                <div class="add-item">
+                    <button class="subtract">
+                        <img src="./assets/icons/minus-sign.png" />
+                    </button>
+                    <p class="itemQuantity" id="#item-quantity-0">5</p>
+                    <button class="add">
+                        <img src="./assets/icons/plus-sign.png" />
+                    </button>
+                </div>
 
                 <div class="total-item-price">$1000</div>
             </div>
             <hr>
+
+            <div class="item" id="item2">
+                <div class="img-description">
+                    <img />
+                    <div class="item-description">
+                        <h2 name="item-name">placeholder</h5>
+                            <p name="item-type">placeholder</p>
+                    </div>
+                </div>
+
+                <div class="item-price">$2000</div>
+
+                <div class="add-item">
+                    <button class="subtract">
+                        <img src="./assets/icons/minus-sign.png" />
+                    </button>
+                    <p class="itemQuantity" id="#item-quantity1">0</p>
+                    <button class="add">
+                        <img src="./assets/icons/plus-sign.png" />
+                    </button>
+                </div>
+
+                <div class="total-item-price">$2000</div>
+            </div>
+            <hr>
+
         </div>
 
-        <div class="summary">
-            <h3 class="price-name" id="subtotal">Subtotal: </h3> <span class="price" id="subtotal">hi</span>
-            <h3 class="price-name" id="tax">Order Tax: </h3> <span class="price" id="tax"></span>
-            <h3 class="price-name" id="shipping">Shipping: </h3> <span class="price" id="shipping"></span>
-            <h3 class="price-name" id="total">Total: </h3> <span class="price" id="shipping"></span>
-            <input type="submit" value="Checkout">
 
+    </div>
+
+
+
+    <!-- Summary -->
+    <div class="summary">
+        <div class="summary-header">
+            <h1 id="header">Summary</h1>
+            <hr>
         </div>
+
+        <h3 class="price-name" name="subtotal">Subtotal: </h3> <span class="price" id="subtotal">hi</span>
+        <h3 class="price-name" name="tax">Order Tax: </h3> <span class="price" id="tax"></span>
+        <h3 class="price-name" name="shipping">Shipping: </h3> <span class="price" id="shipping"></span>
+        <h3 class="price-name" name="total">Total: </h3> <span class="price" id="total"></span>
+        <input class="checkout-button" type="button" value="Checkout">
+
+    </div>
+
+    <div class="payment-details">
+        <div class="payment-header">
+            <h1>Payment Details</h1>
+            <hr>
+        </div>
+
+        <div class="payment-options">
+            <div class="visa"/></div>
+            <div class="mastercard"/></div>
+            <div class="paypal"/></div>
+        </div>
+
+        <form class="cardInfo">
+            <div class="cardholderInfo">
+                <label for="name" type="text">Cardholder Name</label>
+                <input name="name" type="text" id="cardholder">
+            </div>
+
+            <div class="cardholderInfo">
+                <label for="name" type="text">Card Number</label>
+                <input name="name" type="text" id="number">
+            </div>
+
+            <div class="cardExpiration">
+                <label for="Date" type="text">Expiration Date</label>
+                <input name="name" type="month" id="date">
+            </div>
+
+            <div class="cardExpiration">
+                <label for="number" type="text">Cardholder</label>
+                <input name="number" type="text" id="CVV">
+            </div>
+        </form>
     </div>
 
     <!-- footer -->

@@ -1,43 +1,50 @@
 .order-info {
     padding-top: 7.5vh;
     margin-left: 4%;
-    margin-right: 4%;
-    width: 92%;
+    width: 55%;
     display: flex;
     flex-flow: row wrap;
     align-items: space-around;
     gap: 10%;
+    padding-bottom:7.5vh;
 }
 
 .order-info > .cart-header {
-    flex-basis: 60%;
+    flex-basis: 100%;
 }
 
 .order-info > .item-list {
-    flex-basis: 60%;
-}
-
-.order-info > .summary-header {
-    margin-left: auto;
-    flex-basis: 30%;
-    text-align: left;
-}
-
-.order-info > .summary {
-    margin-left: auto;
-    flex-basis: 30%;
-    text-align: left;
+    flex-basis: 100%;
 }
 
 .order-info hr {
     border: 0.5px solid #3F70AA;
 }
 
-
+.cart-header h1 {
+    font-weight: normal;
+    color: #19457A;
+}
 .summary {
+    width: 28%;
+    height: 40vh;
+    padding-top: 13.5vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-left:auto;
+    margin-right:4%;
     display: flex;
     flex-flow: row wrap;
-    max-height: 50vh;
+}
+
+.summary hr {
+    border: 0.5px solid #3F70AA;
+}
+
+.summary > .summary-header {
+    flex-basis: 100%;
+    text-align: left;
 }
 
 .summary > .price-name {
@@ -48,6 +55,15 @@
 .summary > .price {
     flex-basis: 50%;
     text-align: right;
+}
+
+.summary > h3 {
+    font-size: 18px;
+}
+
+.summary-header > h1 {
+    font-weight: normal;
+    color: #19457A;
 }
 
 /*////////////////////////////
@@ -66,7 +82,6 @@
 }
 
 .item > .img-description {
-    background-color: red;
     display:flex;
     gap: 10px;
     flex-flow: row nowrap;
@@ -75,22 +90,22 @@
 }
 
 .item > .item-price {
-    flex-basis: 5%;
+
+    flex-basis: 10%;
+    font-size:20px;
     text-align: center;
-    background-color: green;
 }
 .img-description > img {
     padding: 10px;
-    width: 100px;
-    height: 100px;
+    min-width: 100px;
+    min-height: 100px;
 }
 
 .item > .item-description {
-    background-color: red;
     flex-basis: 30%;
 }
 
-.item-description > h5 {
+.item-description > h2 {
     font-size: 15px;
     padding-bottom:4px;
 }
@@ -107,12 +122,6 @@
     align-items: center;
 }
 
-.add-item > button {
-    min-height:30px;
-    min-width:30px;
-    margin:15px;
-}
-
 @media only screen and (max-width: 600px) {
     .add-item > button {
         min-height:15px;
@@ -120,12 +129,28 @@
         margin:15px;
     }
 
+    .img-description > img {
+        padding: 10px;
+        min-width: 50px;
+        min-height: 50px;
+    }
+    
+
 }
 .add-item > button {
+    min-height:35px;
+    min-width:35px;
+    margin:15px;
     border: 0px;
     border-radius: 5px;
     background-color: #3F70AA;
     transition: 0.1s;
+}
+
+button > img{
+    width:20px;
+    margin:auto;
+    filter:invert(1);
 }
 
 .add-item > button:hover {
@@ -135,10 +160,11 @@
 /*maybe insert media query to adjust img size once*/
 .item > .total-item-price {
     flex-basis: 10%;
+    font-size: 20px;
     text-align: center;
 }
 
-input[type=submit] {
+input[type=button] {
     border-radius: 3px;
     width:100%;
     margin: 3vh 0 3vh auto;
@@ -148,3 +174,101 @@ input[type=submit] {
     color: white;
     background-color: #19457A;
 }
+
+/*/////////////////////////////////////
+///
+//         Payment Details
+///
+/////////////////////////////////////*/
+.payment-details {
+    padding-top: 7.5vh;
+    margin-left: 4%;
+    width: 55%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: row;
+    gap: 10%;
+    padding-bottom:7.5vh;
+}
+
+.payment-header {
+    flex-basis: 100%;
+}
+.payment-header > h1 {
+
+    font-weight: normal;
+    color: #19457A;
+}
+
+.payment-details hr {
+    width:100%;
+    border: 0.5px solid #3F70AA;
+}
+
+.payment-options {
+    display:flex;
+    align-items: center;
+    justify-content: left;
+    height:7.5vh;
+    flex-basis:100%;
+    gap: 1.5%;
+}
+
+.payment-options > .visa {
+    height:80%;
+    background-color: #10315B;
+    flex-basis:14%;
+    border-radius: 12px;
+}
+
+.payment-options > .mastercard{
+    height:80%;
+    background-color: #10315B;
+    flex-basis:14%;
+    border-radius: 12px;
+}
+
+.payment-options > .paypal{
+    height:80%;
+    background-color: #10315B;
+    flex-basis:14%;
+    border-radius: 12px;
+}
+
+.cardInfo {
+    width:100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 5%;
+}
+
+.cardInfo > .payment-header {
+    flex-basis: 100%;
+}
+
+.cardInfo > .cardholderInfo {
+    flex-basis: 100%;
+    display:grid;
+}
+
+.cardInfo label {
+    font-family: "Helvetica", sans-serif;
+    color: #10315B;
+    padding-bottom: 10px;
+}
+
+.cardholderInfo {
+    padding: 10px 0 10px 0;
+    display:grid;
+}
+
+.cardExpiration {
+    display:grid;
+}
+.cardInfo input, textarea {
+    border: 2px solid #3F70AA;
+    border-radius: 10px;
+    padding: 10px;
+}
+
