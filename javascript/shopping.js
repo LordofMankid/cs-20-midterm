@@ -1,33 +1,34 @@
 $(document).ready(function () {
 
+    
     calculateSubtotal();
 
-    adjustQuantities();
-
+    
+    updateSummary();
     console.log(sessionStorage.getItem("1"));
 });
 
 
-function addItem() {
+function addItem(item) {
 
-    $(":button").filter('.add').on("click", function () {
-        var itemQuantity = $(this).siblings("p").text(); // or var clickedBtnID = this.id
-        var element = $(this);
-
+   
+        var itemQuantity = $(item).siblings("p").text(); // or var clickedBtnID = this.id
+        var element = $(item);
+        console.log("hi");
         itemQuantity++;
-        $(this).siblings("p").text(itemQuantity);
-
+        $(item).siblings("p").text(itemQuantity);
+        createItem();
         var item_price = element.parent().siblings(".item-price").text();
         var total_price = element.parent().siblings(".total-item-price");
         total_price.text("$" + calculateItemPrice(item_price, itemQuantity).toFixed(2));
 
-    });
-
 
 }
 
-function deleteItem() {
-
+function createItem() {
+    
+    var item = '<div class="item" id="item2"> <div class="img-description"> <img /> <div class="item-description"> <h2 name="item-name">placeholder</h5> <p name="item-type">placeholder</p> </div> </div> <div class="item-price">$10</div> <div class="add-item"> <button class="subtract"> <img src="./assets/icons/minus-sign.png" /> </button> <p class="itemQuantity" id="#item-quantity-0">1</p> <button class="add"> <img src="./assets/icons/plus-sign.png" /> </button> </div> <div class="total-item-price">$1000</div><hr> </div> ';
+    $(".item-list").append(item);
 }
 
 function calculateItemPrice(unit_price, num_items) {
@@ -42,37 +43,48 @@ function parseNonNumbers(string) {
 
     return string;
 }
-function subtractItem() {
-    $(":button").filter('.subtract').on("click", function () {
-        var itemQuantity = $(this).siblings("p").text(); // or var clickedBtnID = this.id
-        var element = $(this);
+
+function subtractItem(item) {
+        var itemQuantity = $(item).siblings("p").text(); // or var clickedBtnID = this.id
+        var element = $(item);
 
         itemQuantity--;
-        $(this).siblings("p").text(itemQuantity);
+        $(item).siblings("p").text(itemQuantity);
 
 
         var item_price = element.parent().siblings(".item-price").text();
         var total_price = element.parent().siblings(".total-item-price");
         
-
-
-        if(itemQuantity < 0) {
+        
+        if(itemQuantity <= 0) {
             console.log("hi");
-            $(this).parent().parent().hide();   
+            $(item).parent().parent().hide(); 
+            itemQuantity = 0;
+
         }
+
         total_price.text("$" + calculateItemPrice(item_price, itemQuantity));
 
-    });
 }
 
-function adjustQuantities() {
-    addItem();
-    subtractItem();
+function adjustQuantities(item) {
+    if(item.attr('class') == "add") {
+        addItem(item);
+    
+    } else {
+        subtractItem(item);
+    }
     updateSummary();
-    $(":button").on("click", function () {
-        updateSummary();
-    });
+
+    
 }
+
+$(document).on('click', ":button", function () {
+    var item = $(this);
+
+    adjustQuantities(item);
+
+});
 
 function calculateSubtotal() {
     var numItem = $('.item');
