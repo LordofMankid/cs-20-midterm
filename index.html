@@ -6,13 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Midterm Proj (replace with proj name)</title>
+    <title>Overflo.</title>
+    <style>
+        .icon,
+        .text {
+            vertical-align: middle;
+            display: inline-block;
+        }
+
+        .icon {
+            margin-left: 5px;
+        }
+    </style>
 </head>
 
 <body>
-
     <!-- jquery library -->
-
     <script src="https://code.jquery.com/jquery-3.6.1.js"
         integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous">
         </script>
@@ -23,6 +32,7 @@
             $(".hero-img").css('background-image', "url('./assets/hero-images/home-page.jpg')");
         });
     </script>
+
     <!-- header -->
     <div class="header">
         <div class="logo">
@@ -55,20 +65,24 @@
             <img src="./assets/card_img/card-img1.png" />
             <h1>Toilets</h1>
             <h3>Our toilets goes beyond flushing. We made sure our materials are high quality ceramics from Italy, easy
-                to clean without stains. Our toilet design allows everything to go down the drain smoothly. Optional
-                seat warmers and bidets are provided for better experience.</h3>
+                to clean without stains. 
+            <br><br>Optional seat warmers and bidets are available for a better experience.</h3>
+            <h3 class="text">Learn more <img src="./assets/icons/arrow-right.svg" class="icon"/></h3>
         </div>
         <div class="card">
             <img src="./assets/card_img/card-img2.png" />
             <h1>Toiletries</h1>
-            <h3>We have a huge selection of toileties. We make sure that all products are sustainable or biodegradable.
+            <h3>We have a huge selection of toiletries. We make sure that all products are sustainable or biodegradable. <br><br>Responsibly sourced, with the same high standards and quality that you come to expect from luxury brands.
             </h3>
+            <h3 class="text">Learn more <img src="./assets/icons/arrow-right.svg" class="icon"/></h3>
         </div>
         <div class="card">
             <img src="./assets/card_img/card-img3.png" />
             <h1>Services</h1>
             <h3>We offer delivery, installing, maintaing, and cleaning services. The finest in the business, hassle-free
-                and satisfaction guaranteed. </h3>
+                and satisfaction guaranteed.
+            <br><br>No more headaches. Just sit back, relax, and we'll handle the rest. </h3>
+            <h3 class="text">Learn more <img src="./assets/icons/arrow-right.svg" class="icon"/></h3>
         </div>
     </div>
 

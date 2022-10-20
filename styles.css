@@ -332,6 +332,19 @@ body {
   margin-block: 100px;
 }
 
+.services {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  margin-inline: 15vw;
+  margin-block: 100px;
+}
+
+.services > img {
+  width: 70%;
+}
+
+
 .about-us > img {
   width: 40%;
 }
