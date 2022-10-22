@@ -7,6 +7,7 @@
     align-items: space-around;
     gap: 10%;
     padding-bottom:7.5vh;
+    transition: 0.1s;
 }
 
 .order-info > .cart-header {
@@ -38,6 +39,7 @@
     margin-right:4%;
     display: flex;
     flex-flow: row wrap;
+    transition: 0.1s;
 }
 
 .summary hr {
@@ -61,6 +63,7 @@
 
 .summary > h3 {
     font-size: 18px;
+    
 }
 
 .summary-header > h1 {
@@ -95,8 +98,9 @@
 .item > .item-price {
 
     flex-grow:1;
-    font-size:18px;
+    font-size:20px;
     text-align: center;
+    transition: 0.1s;
 }
 
 .img-description > img {
@@ -105,25 +109,30 @@
     min-height: 100px;
     max-width:100px;
     max-height:100px;
+    transition: 0.1s;
 }
 
 .item > .item-description {
     flex-grow:2;
+    transition: 0.1s;
 }
 
 .item-description > h2 {
-    font-size: 15px;
+    font-size: 18px;
     padding-bottom:4px;
+    transition: 0.1s;
 }
 
 .item-description > p {
     font-size: 10px;
+    transition: 0.1s;
 }
 
 
 .item > hr {
 
     flex-basis:100%;
+    transition: 0.1s;
 
 }
 
@@ -152,7 +161,7 @@
     transition: 0.1s;
 }
 
-button > img{
+button > img {
     width:20px;
     margin:auto;
     filter:invert(1);
@@ -165,8 +174,9 @@ button > img{
 /*maybe insert media query to adjust img size once*/
 .item > .total-item-price {
     flex-basis: 13%;
-    font-size: 18px;
+    font-size: 20px;
     text-align: center;
+    transition: 0.1s;
 }
 
 input[type=button] {
@@ -217,24 +227,30 @@ input[type=button] {
     height:7.5vh;
     flex-basis:100%;
     gap: 1.5%;
+
 }
 
 .payment-options > .visa {
-    height:80%;
-    background-color: #10315B;
+    min-width: 140px;
+    min-height: 70px;
+
+    background: url("./assets/icons/visa-image.png");
+    background-size: cover;
     flex-basis:14%;
     border-radius: 12px;
 }
 
 .payment-options > .mastercard{
-    height:80%;
+    min-width: 140px;
+    min-height: 70px;
     background-color: #10315B;
     flex-basis:14%;
     border-radius: 12px;
 }
 
 .payment-options > .paypal{
-    height:80%;
+    min-width: 140px;
+    min-height: 70px;
     background-color: #10315B;
     flex-basis:14%;
     border-radius: 12px;
@@ -278,6 +294,28 @@ input[type=button] {
 }
 
 
+
+@media only screen and (max-width: 1500px) {
+
+    .item > .total-item-price {
+        flex-basis: 10%;
+        font-size: 18px;
+    }
+
+    .item > .item-price {
+        font-size: 18px;
+    }
+
+
+    .item-description > h2 {
+        font-size:12px;
+    }
+
+    .add-item {
+        flex-basis:10%;
+    }
+
+}
 
 
 @media only screen and (max-width: 1200px) {
@@ -330,11 +368,11 @@ input[type=button] {
         margin-left: 4%;
         width: 92%;
         display: flex;
-        flex-flow: row wrap;
-        align-items: space-around;
         gap: 10%;
         padding-bottom:7.5vh;
+        
     }
+
     .summary {
         width: 92%;
         height: 40vh;
@@ -346,5 +384,35 @@ input[type=button] {
         flex-flow: row wrap;
     }
 
+    .payment-details {
+        padding-top: 7.5vh;
+        margin-left: 4%;
+        width: 70%;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: row;
+        gap: 10%;
+        padding-bottom:7.5vh;
+    }
+
+
+    .payment-options > .visa {
+        min-width: 103px;
+        min-height: 51px;
+
+    }
+    
+    .payment-options > .mastercard{
+
+        min-width: 103px;
+        min-height: 51px;
+
+    }
+    
+    .payment-options > .paypal{
+        min-width: 103px;
+        min-height: 51px;
+
+    }
     
 }
