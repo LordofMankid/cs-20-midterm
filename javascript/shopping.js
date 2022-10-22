@@ -84,9 +84,14 @@ function adjustQuantities(item) {
 }
 
 $(document).on('click', ":button", function () {
-    var item = $(this);
+    if((this).attr('class') != "checkout-button") {
+        var item = $(this);
 
-    adjustQuantities(item);
+        adjustQuantities(item);
+        
+    } else {
+        var form = $();
+    }
 
 });
 
@@ -120,4 +125,9 @@ function updateSummary() {
     $("#tax").text("$" + order_tax.toFixed(2));
     $("#shipping").text("$" + shipping.toFixed(2));
     $("#total").text("$" + total.toFixed(2));
+}
+
+function verifyData(element) {
+    var data = $(cardInfo).child().val();
+
 }

@@ -221,6 +221,8 @@ input[type=button] {
 }
 
 .payment-options {
+    
+    padding-top:15px;
     display:flex;
     align-items: center;
     justify-content: left;
@@ -233,7 +235,7 @@ input[type=button] {
 .payment-options > .visa {
     min-width: 140px;
     min-height: 70px;
-
+    
     background: url("./assets/icons/visa-image.png");
     background-size: cover;
     flex-basis:14%;
