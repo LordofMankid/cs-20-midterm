@@ -1,9 +1,7 @@
 $(document).ready(function () {
-
     
     calculateSubtotal();
 
-    
     updateSummary();
     console.log(sessionStorage.getItem("1"));
 });
@@ -17,7 +15,13 @@ function addItem(item) {
         console.log("hi");
         itemQuantity++;
         $(item).siblings("p").text(itemQuantity);
-        createItem();
+        var prodInfo = {
+            url: "./assets/products/sunflowerDEMO.jpg",
+            price: "$1000",
+            name: "johasdfasdfny",
+            descript: "johnyn"
+        };
+        createItem(prodInfo);
         var item_price = element.parent().siblings(".item-price").text();
         var total_price = element.parent().siblings(".total-item-price");
         total_price.text("$" + calculateItemPrice(item_price, itemQuantity).toFixed(2));
@@ -25,9 +29,9 @@ function addItem(item) {
 
 }
 
-function createItem() {
+function createItem(prodInfo) {
     
-    var item = '<div class="item" id="item2"> <div class="img-description"> <img /> <div class="item-description"> <h2 name="item-name">placeholder</h5> <p name="item-type">placeholder</p> </div> </div> <div class="item-price">$10</div> <div class="add-item"> <button class="subtract"> <img src="./assets/icons/minus-sign.png" /> </button> <p class="itemQuantity" id="#item-quantity-0">1</p> <button class="add"> <img src="./assets/icons/plus-sign.png" /> </button> </div> <div class="total-item-price">$1000</div><hr> </div> ';
+    var item = '<div class="item" id="item1"> <div class="img-description"> <img src="' + prodInfo.url + '" /> <div class="item-description"> <h2 name="item-name">' + prodInfo.name + '</h5> <p name="item-type">' + prodInfo.descript + '</p> </div> </div> <div class="item-price">' + prodInfo.price + '</div> <div class="add-item"> <button class="subtract"> <img src="./assets/icons/minus-sign.png" /> </button> <p class="itemQuantity" id="#item-quantity-0">5</p> <button class="add"> <img src="./assets/icons/plus-sign.png" /> </button> </div> <div class="total-item-price">' + prodInfo.price + '</div> <hr> </div> ';
     $(".item-list").append(item);
 }
 
@@ -63,7 +67,7 @@ function subtractItem(item) {
 
         }
 
-        total_price.text("$" + calculateItemPrice(item_price, itemQuantity));
+        total_price.text("$" + calculateItemPrice(item_price, itemQuantity).toFixed(2));
 
 }
 
