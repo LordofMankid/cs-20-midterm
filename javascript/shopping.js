@@ -90,8 +90,7 @@ $(document).on('click', ":button", function () {
         adjustQuantities(item);
         
     } else {
-        var form = $(".cardInfo");
-        verifyData(form);
+        verifyData();
     }
 
 });
@@ -128,12 +127,81 @@ function updateSummary() {
     $("#total").text("$" + total.toFixed(2));
 }
 
-function verifyData(element) {
-    element.find('input, text').each(function() {
-        if($(this).val() == "") {
-            alert("Please fill out the form!");
-        }
+function verifyData() {
+    var cardholder = $("#cardholder").val();
+    var cardNumber = $("#cardNumber").val();
+    var expirDate = $("#date").val();
+    var cvv = $("#CVV").val();
+    var terms = $("#yas");
 
-    });
+    if (verifyCardholder(cardholder) == true  &&
+        verifyCardNumber(cardNumber) == true &&
+        verifyExpiration(expirDate) == true  &&
+        verifyCVV(cvv) == true) {
+            $(location).prop('href', "./index.html");
+        } 
+        
+}
 
+function verifyCardholder(input) {
+    let validInput = false;
+    input = input.trim();
+
+    if(input == "") {
+        alert("Please enter your name!");
+    } else {
+        validInput = true;
+    }
+    
+    return validInput
+}
+
+function verifyCardNumber(input) {
+    let validInput = false;
+    input = input.trim();
+
+    if(input == "") {
+        alert("Please enter your card number!");
+    } else if(/[a-zA-Z]/.test(input) == true || input.length < 16) {
+        alert("Please enter a valid 16-digit card number.");
+    } else {
+        validInput = true;
+    }
+
+    return validInput;
+}
+
+function verifyExpiration(input) {
+
+    let validInput = false;
+    var date = Date.parse(input);
+    var currTime = new Date();
+
+    if(isNaN(date)) {
+        alert("Please enter a date!");
+    } else if (date < Date.parse(currTime)) {
+        alert("Your card is expired. Please use another one.")
+    } else {
+        validInput = true;
+    }
+
+    return validInput;
+}
+
+function verifyCVV(input) {
+    
+    let validInput = false;
+    input = input.trim();
+    
+    if(input == "") {
+        alert("Please enter a CVV!");
+    } else if(/[a-zA-Z]/.test(input) == true) {
+        alert("Please enter a valid CVV.");
+    } else if(input.length != 3) {
+        alert("Please enter a 3-number CVV.")
+    } else {
+        validInput = true;
+    }
+
+    return validInput;
 }
