@@ -236,8 +236,8 @@ input[type=button] {
     min-width: 140px;
     min-height: 70px;
     
-    background: url("./assets/icons/visa-image.png");
-    background-size: cover;
+    background: url("../assets/icons/visa-image.png") 0 0 no-repeat;
+    background-size: contain;
     flex-basis:14%;
     border-radius: 12px;
 }

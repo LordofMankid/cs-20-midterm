@@ -84,13 +84,14 @@ function adjustQuantities(item) {
 }
 
 $(document).on('click', ":button", function () {
-    if((this).attr('class') != "checkout-button") {
+    if($(this).attr('class') != "checkout-button") {
         var item = $(this);
 
         adjustQuantities(item);
         
     } else {
-        var form = $();
+        var form = $(".cardInfo");
+        verifyData(form);
     }
 
 });
@@ -128,6 +129,11 @@ function updateSummary() {
 }
 
 function verifyData(element) {
-    var data = $(cardInfo).child().val();
+    element.find('input, text').each(function() {
+        if($(this).val() == "") {
+            alert("Please fill out the form!");
+        }
+
+    });
 
 }
