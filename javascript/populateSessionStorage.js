@@ -34,7 +34,7 @@ const showerHead = { name: "Steel Shower Head",
                                   "Won't stain over time.", 
                                   "Adjustable pressure."] };
 
-const toiletPaperHolder = { name: "Wooden Toilet Paper Holder",
+const toiletPaperHolder = { name: "Toilet Paper Holder",
                     id: 'toiletPaperHolder',
                     price: 100,
                     material: "Steel",

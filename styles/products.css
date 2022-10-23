@@ -162,8 +162,8 @@
 
 /* modal for desktop */
   .modal-container {
-    position: absolute;
-    bottom: calc((100vh - 500px) / 2);
+    position: fixed;
+    bottom: calc((100vh - 800px) / 2);
     left: calc((100vw - 800px) / 2);
     background-color: rgba(0, 0, 0, 0.75);
     width: 800px;
