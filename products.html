@@ -22,6 +22,7 @@
     <script src="https://code.jquery.com/jquery-3.6.1.js"
         integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <script src="./javascript/products.js"></script>
+    <script src="./javascript/productsModal.js"></script>
     
     <!-- header -->
     <div class="header">
@@ -51,42 +52,93 @@
     <!-- grid of products -->
     <div class="productsContainer">
         <div class="productsSidebar">
-            <h3>Toilet Set</h3>
-            <h3>Toilet Lid</h3>
-            <h3>Accessories</h3>
-            <h3>Toiletries</h3>
+            <h3 class="filter" id="allFilter" onclick="filter('all')">All</h3>
+            <h3 class="filter" id="toiletSetFilter" onclick="filter('toiletSet')">Toilet Set</h3>
+            <h3 class="filter" id="toiletPartsFilter" onclick="filter('toiletParts')">Toilet Parts</h3>
+            <h3 class="filter" id="accessoriesFilter" onclick="filter('accessories')">Accessories</h3>
+            <h3 class="filter" id="toiletriesFilter" onclick="filter('toiletries')">Toiletries</h3>
         </div>
         <div class="products">
-            <div class="product">
-                <img src="./assets/products-images/product1.png">
-                <h3>Toilet</h3>
-                <h4>$5000</h4>
+            <div class="product" id="toiletSet">
+                <img src="./assets/products-images/product1.png" onclick="showModal('toiletSet')">
+                <div class="productInfo">
+                    <h3>Toilet Set</h3>
+                    <h4>$5000</h4>
+                </div>
+                <button onclick="showModal()">More Info</button>
             </div>
-            <div class="product">
-                <img src="./assets/products-images/product1.png">
-                <h3>Toilet</h3>
-                <h4>$5000</h4>
+            <div class="product" id="toiletPaper">
+                <img src="./assets/products-images/product2.png" onclick="showModal('toiletPaper')">
+                <div class="productInfo">
+                    <h3>Toilet Paper</h3>
+                    <h4>$15</h4>
+                </div>
+                <button onclick="showModal()">More Info</button>
             </div>
-            <div class="product">
-                <img src="./assets/products-images/product1.png">
-                <h3>Toilet</h3>
-                <h4>$5000</h4>
+            <div class="product" id="showerHead">
+                <img src="./assets/products-images/product3.png" onclick="showModal('showerHead')">
+                <div class="productInfo">
+                    <h3>Shower Head</h3>
+                    <h4>$200</h4>
+                </div>
+                <button onclick="showModal()">More Info</button>
             </div>
-            <div class="product">
-                <img src="./assets/products-images/product1.png">
-                <h3>Toilet</h3>
-                <h4>$5000</h4>
+            <div class="product" id="toiletPaperHolder" style="display: none">
+                <img src="./assets/products-images/product4.png" onclick="showModal('toiletPaperHolder')">
+                <div class="productInfo">
+                    <h3>Toilet Paper Holder</h3>
+                    <h4>$100</h4>
+                </div>
+                <button onclick="showModal()">More Info</button>
             </div>
-            <div class="product">
-                <img src="./assets/products-images/product1.png">
-                <h3>Toilet</h3>
-                <h4>$5000</h4>
+            <div class="product" id="toothbrushes" style="display: none">
+                <img src="./assets/products-images/product5.png" onclick="showModal('toothbrushes')">
+                <div class="productInfo">
+                    <h3>Wooden Toothbrushes</h3>
+                    <h4>$5</h4>
+                </div>
+                <button onclick="showModal()">More Info</button>
             </div>
         </div>
     </div>
 
+    <div class="productModal" id="modalId">
+        <section class = "modal-container">
+
+            <div id="close" onclick="hideModal()">
+              <img src="./assets/icons/x.svg" alt="x">
+            </div>
+      
+            <div class = "toilet-image">
+              <img src="" alt="toilet" id="productImg">
+            </div>
+      
+            <h2>Overflo.</h2>
+            <h1 id="name">Beautiful Toilet Set</h1>
+            <div id="rating">
+              <img src="./assets/icons/stars.svg" alt="ratings">
+            </div>
+            <hr>
+            <p id="price">$11.91</p>
+            <p id="material">Material: Ceramics</p>
+            <p id="dimensions">Dimensions: 11” x 11” x 11”</p>
+            <p id="year">Year: 2022</p>
+            <h2 id="about">About this product</h2>
+            <ul id="about_info">
+              <li>Made of ceramic from Italy. Stain-free and easy to clean. No more worrying about stains on seat and lids.</li>
+              <li>Comes with toilet lid, flusher, bidet, and seat warmer. Accessories are easy to take out as you wish.</li>
+              <li>Comes with two flusher system for saving water and environment.</li>
+            </ul>
+            
+            <button type="button" class="addToCart" onclick="addToCart()">Add to Cart</button>
+      
+            </section>
+    </div>
+
+    <!-- <button onclick="addToCart()">Add to Cart</button> -->
+
     <div class="productsButton">
-        <button>Load More</button>
+        <button onclick="loadMore()">Load More</button>
     </div>
 
     <!-- footer -->

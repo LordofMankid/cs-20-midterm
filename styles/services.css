@@ -75,6 +75,26 @@
       width: 100%;
       margin-block: 50px;
     }
+
+    .services-button {
+        display: grid;
+        place-items: center;
+        margin-bottom: 50px;
+      }
+    
+      .services-button > a > button {
+        border: 0px solid black;
+        padding-block: 20px;
+        padding-inline: 40px;
+        background-color:#143a6b;
+        color: white;
+        font-family: "Zodiak-Regular", sans-serif;
+        cursor: pointer;
+      }
+    
+      .services-button > a > button:hover {
+        background-color:#0a2345;
+      }
   }
   
   /* font faces */

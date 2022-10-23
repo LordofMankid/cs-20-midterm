@@ -23,15 +23,33 @@
     .product {
       width: 21vw;
       height: 21vw;
-      margin-bottom: 20px;
+      margin-bottom: 40px;
+    }
+
+    .product > img {
+      cursor: pointer;
+    }
+
+    .product > button {
+      border: 0px solid black;
+      background-color:#10315B;
+      color: white;
+      padding-inline: 10px;
+      padding-block: 5px;
+      cursor: pointer;
+    }
+
+    .productInfo {
+      display: flex;
+      justify-content: space-between;
+      margin-block: 15px;
     }
   
-    .product>h3 {
-      margin-block: 10px;
+    .productInfo >h3 {
       font-family: "Zodiak-Bold", sans-serif;
     }
   
-    .product>h4 {
+    .productInfo >h4 {
       font-weight: normal;
       font-family: "Zodiak-Regular", sans-serif;
     }
@@ -59,9 +77,17 @@
     .productsButton > button:active {
       background-color:#072144;
     }
-  }
+
+    .productModal {
+      display: none;
+    }
+
+    .filter {
+      cursor: pointer;
+    }
+}
   
-  /* products page for mobile and tablet screens */
+/* products page for mobile and tablet screens */
   @media only screen and (max-width: 768px) {
     .productsContainer {
       margin: 10vw;
@@ -76,25 +102,284 @@
       font-family: "Zodiak-Regular", sans-serif;
       margin-block: 10px;
     }
-  
+
     .product {
-      display: grid;
-      place-items: center;
-      margin-block: 50px;
+      margin-bottom: 30px;
     }
   
-    .product>h3 {
-      font-size: 24px;
-      font-family: "Zodiak-Bold", sans-serif;
+    .product > img {
+      cursor: pointer;
+    }
+
+    .product > button {
+      border: 0px solid black;
+      background-color:#10315B;
+      color: white;
+      padding-inline: 10px;
+      padding-block: 5px;
+      cursor: pointer;
+    }
+
+    .productInfo {
+      display: flex !important;
+      justify-content: space-between !important;
       margin-block: 15px;
     }
   
-    .product>h4 {
-      font-size: 18px;
-      font-family: "Zodiak-Regular", sans-serif;
+    .productInfo >h3 {
+      font-family: "Zodiak-Bold", sans-serif;
+    }
+  
+    .productInfo >h4 {
       font-weight: normal;
+      font-family: "Zodiak-Regular", sans-serif;
+    }
+
+    .productsButton {
+      display: grid;
+      place-items: center;
+      margin-bottom: 70px;
+    }
+  
+    .productsButton > button {
+      border:2px solid #10315B;
+      background-color: inherit;
+      padding-block: 15px;
+      padding-inline: 40px;
+      font-family: "Zodiak-Regular", sans-serif;
+      cursor: pointer;
+    }
+  
+    .productsButton > button:hover {
+      background-color: #153968;
+      color: white;
+    }
+  
+    .productsButton > button:active {
+      background-color:#072144;
     }
 }
+
+/* modal for desktop */
+  .modal-container {
+    position: absolute;
+    bottom: calc((100vh - 500px) / 2);
+    left: calc((100vw - 800px) / 2);
+    background-color: rgba(0, 0, 0, 0.75);
+    width: 800px;
+    height: 800px;
+    transition: 0.5s ease-in;
+  }
+
+  /* ----- images ----- */
+  img {
+    max-width: 100%;
+    
+  }
+
+  .toilet-image img {
+    position: absolute;
+    left: 3.75%;
+    right: 48.25%;
+    top: 10.75%;
+    bottom: 41.25%;
+  }
+
+  /* ----- text ----- */
+  .modal-container h2 {
+    position: absolute;
+
+    left: 57.5%;
+    right: 5.75%;
+    top: 100px;
+    bottom: 78.25%;
+
+    font-family: 'Zodiak';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26.8px;
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+
+  .modal-container h1 {
+    position: absolute;
+    left: 57.5%;
+    right: 5.75%;
+    top: 16.75%;
+    bottom: 78.25%;
+
+    font-family: 'Zodiak';
+    font-style: normal;
+    font-weight: 540;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+
+    color: #FFFFFF;
+    
+  }
+
+  #price {
+    position: absolute;
+    left: 57.5%;
+    right: 35.25%;
+    top: 33.12%;
+    bottom: 63.5%;
+
+    font-family: 'Zodiak';
+    font-style: normal;
+    font-weight: 540;
+    font-size: 20px;
+    line-height: 27px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+
+  #material {
+    position: absolute;
+    left: 57.5%;
+    right: 24.88%;
+    top: 39%;
+    bottom: 58.38%;
+
+    font-family: 'Zodiak';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+
+    color: #FFFFFF;
+  }
+
+  #dimensions {
+    position: absolute;
+    left: 57.5%;
+    right: 18.75%;
+    top: 44.25%;
+    bottom: 53.12%;
+
+    font-family: 'Zodiak';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+
+    color: #FFFFFF;
+  }
+
+  #year {
+    position: absolute;
+    left: 57.5%;
+    right: 31.88%;
+    top: 49.25%;
+    bottom: 48.12%;
+
+    font-family: 'Zodiak';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+
+    color: #FFFFFF;
+  }
+
+  #about {
+    position: absolute;
+    left: 3.75%;
+    right: 73.12%;
+    top: 62.5%;
+    bottom: 34.12%;
+
+    font-family: 'Zodiak';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    /* identical to box height */
+
+    color: #FFFFFF;
+  }
+
+  #about_info {
+    position: absolute;
+    left: 3.88%;
+    right: 5%;
+    top: 68%;
+    bottom: 22.5%;
+
+    font-family: 'Zodiak';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+
+    color: #FFFFFF;
+  }
+
+  /* ----- other elements ----- */
+  .modal-container > hr {
+    position: absolute;
+    left: 57.5%;
+    right: 5%;
+    top: 29.38%;
+    bottom: 70.62%;
+
+    border: 1px solid #FFFFFF;
+  }
+
+  #close {
+    position: absolute;
+    left: 1.25%;
+    right: 93%;
+    top: 1.25%;
+    bottom: 93%;
+  }
+
+  #rating {
+    position: absolute;
+    left: 67.88%;
+    right: 15.12%;
+    top: 25.5%;
+    bottom: 74.38%;
+
+    width: 136px;
+    height: 24px;
+  }
+
+  .addToCart {
+    position: absolute;
+    left: 73.5%;
+    right: 4.98%;
+    top: 87.62%;
+    bottom: 5.62%;
+
+    width: 172.12px;
+    height: 54px;
+
+    font-family: 'Zodiak';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16.2px;
+    line-height: 22px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #FFFFFF;
+    background-color: #3F70AA;
+    border: none;
+  }
+
+  button.addToCart:hover{
+    cursor: pointer;
+    background-color: #19457A;
+  }
   
 /* font faces */
 @font-face {

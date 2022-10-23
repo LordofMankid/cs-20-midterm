@@ -1,37 +1,40 @@
 $(document).ready(function () {
     
+    printCartItems();
+
     calculateSubtotal();
 
     updateSummary();
-    console.log(sessionStorage.getItem("1"));
+
 });
 
 
 function addItem(item) {
 
-   
+    
         var itemQuantity = $(item).siblings("p").text(); // or var clickedBtnID = this.id
         var element = $(item);
-        console.log("hi");
         itemQuantity++;
         $(item).siblings("p").text(itemQuantity);
-        var prodInfo = {
-            url: "./assets/products/sunflowerDEMO.jpg",
-            price: "$1000",
-            name: "johasdfasdfny",
-            descript: "johnyn"
-        };
-        createItem(prodInfo);
+
         var item_price = element.parent().siblings(".item-price").text();
         var total_price = element.parent().siblings(".total-item-price");
-        total_price.text("$" + calculateItemPrice(item_price, itemQuantity).toFixed(2));
 
-
+        total_price.text("$" + calculateItemPrice(item_price, itemQuantity));
+        
+        var item_id = element.parent().parent().attr('id');
+        var cartItem = JSON.parse(sessionStorage.getItem(item_id));  
+        cartItem.quantity = itemQuantity;
+        console.log(cartItem.quantity);
+        sessionStorage.setItem(item_id, JSON.stringify(cartItem));      
 }
 
 function createItem(prodInfo) {
+    // var arrayOfCartItems = sessionStorage.getItem("cart");
+    console.log(prodInfo.url);
+    var item = '<div class="item" id="'+ prodInfo.id + '"> <div class="img-description"> <img src="' + prodInfo.url + '" /> <div class="item-description"> <h2 name="item-name">' + prodInfo.name + '</h2> </div> </div> <div class="item-price">$' + prodInfo.price + '</div> <div class="add-item"> <button class="subtract"> <img src="./assets/icons/minus-sign.png" /> </button> <p class="itemQuantity" id="#item-quantity-0">' + prodInfo.quantity + '</p> <button class="add"> <img src="./assets/icons/plus-sign.png" /> </button> </div> <div class="total-item-price">$' + prodInfo.price * prodInfo.quantity + '</div> <hr> </div> ';
     
-    var item = '<div class="item" id="item1"> <div class="img-description"> <img src="' + prodInfo.url + '" /> <div class="item-description"> <h2 name="item-name">' + prodInfo.name + '</h5> <p name="item-type">' + prodInfo.descript + '</p> </div> </div> <div class="item-price">' + prodInfo.price + '</div> <div class="add-item"> <button class="subtract"> <img src="./assets/icons/minus-sign.png" /> </button> <p class="itemQuantity" id="#item-quantity-0">5</p> <button class="add"> <img src="./assets/icons/plus-sign.png" /> </button> </div> <div class="total-item-price">' + prodInfo.price + '</div> <hr> </div> ';
+    
     $(".item-list").append(item);
 }
 
@@ -67,7 +70,13 @@ function subtractItem(item) {
 
         }
 
-        total_price.text("$" + calculateItemPrice(item_price, itemQuantity).toFixed(2));
+        total_price.text("$" + calculateItemPrice(item_price, itemQuantity));
+
+        var item_id = element.parent().parent().attr('id');
+        var cartItem = JSON.parse(sessionStorage.getItem(item_id));  
+        cartItem.quantity = itemQuantity;
+        console.log(cartItem.quantity);
+        sessionStorage.setItem(item_id, JSON.stringify(cartItem));      
 
 }
 
@@ -96,19 +105,33 @@ $(document).on('click', ":button", function () {
 });
 
 function calculateSubtotal() {
+    var subtotal = 0;
+     
+    // get all prices and quantities from sessionstorage
+    
+    for(i = 0; i < sessionStorage.length - 1; i++) {
+        if (sessionStorage.key(i) != "alreadyLoaded") {
+            var price = JSON.parse(sessionStorage.getItem(sessionStorage.key(i))).price;
+            //console.log(price);
+            var quantity = JSON.parse(sessionStorage.getItem(sessionStorage.key(i))).quantity;
+            //console.log(quantity);
+            subtotal += price * quantity;
+        }
+    }
+    
+    /*
     var numItem = $('.item');
     var itemPrices = $('.item-price');
-    var subtotal = 0;
-
+    console.log("hi");
     for (i = 0; i < numItem.length; i++) {
         numItem[i] = $(".itemQuantity:eq(" + i + ")").text();
 
         itemPrices[i] = parseNonNumbers($(".item-price:eq(" + i + ")").text());
 
         subtotal += calculateItemPrice(numItem[i], itemPrices[i]);
-    }
+    }*/
 
-    return subtotal;
+     return subtotal;
 
 }
 
@@ -120,6 +143,7 @@ function updateSummary() {
     if (subtotal > 100) {
         shipping = 0;
     }
+
     var total = subtotal + order_tax + shipping;
     $("#subtotal").text("$" + subtotal.toFixed(2));
     $("#tax").text("$" + order_tax.toFixed(2));
@@ -204,4 +228,13 @@ function verifyCVV(input) {
     }
 
     return validInput;
+}
+
+function printCartItems() {
+    for(i = 1; i < sessionStorage.length; i++) {
+        var cartItem = JSON.parse(sessionStorage.getItem(sessionStorage.key(i)));
+        if(cartItem.quantity != 0) {
+            createItem(cartItem);
+        }
+    }
 }

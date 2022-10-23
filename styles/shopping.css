@@ -240,8 +240,8 @@ input[type=button]:hover {
 }
 
 .payment-options > .visa {
-    min-width: 140px;
-    min-height: 70px;
+    min-width: 103px;
+    min-height: 51px;
     background: url("../assets/icons/visa-image.png") 0 0 no-repeat;
     background-position: center;
     background-size: contain;
@@ -250,17 +250,21 @@ input[type=button]:hover {
 }
 
 .payment-options > .mastercard{
-    min-width: 140px;
-    min-height: 70px;
-    background-color: #10315B;
+    min-width: 103px;
+    min-height: 51px;
+    background: url("../assets/icons/mastercard-image.png") 0 0 no-repeat;
+    background-position: center;
+    background-size: contain;
     flex-basis:14%;
     border-radius: 12px;
 }
 
 .payment-options > .paypal{
-    min-width: 140px;
-    min-height: 70px;
-    background-color: #10315B;
+    min-width: 103px;
+    min-height: 51px;
+    background: url("../assets/icons/paypal-image.png") 0 0 no-repeat;
+    background-position: center;
+    background-size: contain;
     flex-basis:14%;
     border-radius: 12px;
 }
@@ -406,8 +410,8 @@ input[type=button]:hover {
 
 
     .payment-options > .visa {
-        min-width: 103px;
-        min-height: 51px;
+        min-width: 70px;
+        min-height: 35px;
 
     }
     
