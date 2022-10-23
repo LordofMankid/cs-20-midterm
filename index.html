@@ -13,18 +13,18 @@
             vertical-align: middle;
             display: inline-block;
         }
-
         .icon {
             margin-left: 5px;
         }
     </style>
 </head>
 
-<body>
+<body onload="showSlides(0)">
     <!-- jquery library -->
     <script src="https://code.jquery.com/jquery-3.6.1.js"
         integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous">
-        </script>
+    </script>
+    <script src="./javascript/carousel.js"></script>
 
     <script>
         $(document).ready(function () {
@@ -36,7 +36,7 @@
     <!-- header -->
     <div class="header">
         <div class="logo">
-            <a href="./index.html">Logo</a>
+            <a href="./index.html">Overflo.</a>
         </div>
         <div class="nav-links">
             <a href="./about.html">About</a>
@@ -67,14 +67,14 @@
             <h3>Our toilets goes beyond flushing. We made sure our materials are high quality ceramics from Italy, easy
                 to clean without stains. 
             <br><br>Optional seat warmers and bidets are available for a better experience.</h3>
-            <h3 class="text">Learn more <img src="./assets/icons/arrow-right.svg" class="icon"/></h3>
+            <h3 class="text"><a href="./products.html">Learn more <img src="./assets/icons/arrow-right.svg" class="icon"/></a></h3>
         </div>
         <div class="card">
             <img src="./assets/card_img/card-img2.png" />
             <h1>Toiletries</h1>
             <h3>We have a huge selection of toiletries. We make sure that all products are sustainable or biodegradable. <br><br>Responsibly sourced, with the same high standards and quality that you come to expect from luxury brands.
             </h3>
-            <h3 class="text">Learn more <img src="./assets/icons/arrow-right.svg" class="icon"/></h3>
+            <h3 class="text"><a href="./products.html">Learn more <img src="./assets/icons/arrow-right.svg" class="icon"/></a></h3>
         </div>
         <div class="card">
             <img src="./assets/card_img/card-img3.png" />
@@ -82,7 +82,7 @@
             <h3>We offer delivery, installing, maintaing, and cleaning services. The finest in the business, hassle-free
                 and satisfaction guaranteed.
             <br><br>No more headaches. Just sit back, relax, and we'll handle the rest. </h3>
-            <h3 class="text">Learn more <img src="./assets/icons/arrow-right.svg" class="icon"/></h3>
+            <h3 class="text"><a href="./products.html">Learn more <img src="./assets/icons/arrow-right.svg" class="icon"/></a></h3>
         </div>
     </div>
 
@@ -94,15 +94,30 @@
     </div>
 
     <!-- carousel of featured products / images -->
-    <h1 class="headerText">Featured Products</h1>
+    <div class="carousel">
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+
+        <div class="slides fade">
+            <a href="./products.html"><img src="./assets/carousel-images/carousel-img3.png"/></a>
+        </div>
+
+        <div class="slides fade">
+            <a href="./services.html"><img src="./assets/carousel-images/carousel-img1.png"/></a>
+        </div>
+
+        <div class="slides fade">
+            <a href="./services.html"><img src="./assets/carousel-images/carousel-img2.png"/></a>
+        </div>
+
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
 
     <!-- testimonials -->
-    <h1 class="headerText">Testimonials</h1>
     <div class="testimonials">
         <div class="testimonial">
             <img src="./assets/testimonial_icons/queen_elizabeth.png">
             <div class="testimonialText">
-                <h1>"Very very lovely product.<br>Luxurious, clean, with great service."</h1>
+                <h1>"Simply splendid. Top notch. Absolutely brilliant.<br>Luxurious, clean, with great service."</h1>
                 <h2>- Queen Elizabeth of England</h2>
             </div>
         </div>
@@ -119,8 +134,8 @@
         <div class="testimonial">
             <img src="./assets/testimonial_icons/neighbour_john.png">
             <div class="testimonialText">
-                <h1>"Very very lovely product.<br>Luxurious, clean, with great service."</h1>
-                <h2>- My Neighbour John</h2>
+                <h1>"Unparalleled products and services. One of a kind. <br>Triumphant. Accept no substitutes."</h1>
+                <h2>- Our Neighbour John</h2>
             </div>
         </div>
     </div>
@@ -152,8 +167,9 @@
                 </h2>
             </div>
             <div class="footerCol">
-                <h1>About Us</h1>
                 <h1>Contact Us</h1>
+                <h2>+1 (123) 456 7890</h2>
+                <h2>contact@overflo.com</h2>
             </div>
             <div class="footerCol">
                 <div class="footer-icons">

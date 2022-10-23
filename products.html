@@ -6,17 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles/products.css">
     <title>Products</title>
+    <style>
+        .hero-img {
+            background: url('./assets/hero-images/products.jpg') rgba(0, 0, 0, 0.3);
+            background-position-y: 70%;
+            background-size:cover;
+            background-blend-mode: multiply;
+        }
+    </style>
 </head>
 
 <body>
     <script src="https://code.jquery.com/jquery-3.6.1.js"
         integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <script src="./javascript/products.js"></script>
+    
     <!-- header -->
     <div class="header">
         <div class="logo">
-            <a href="./index.html">Logo</a>
+            <a href="./index.html">Overflo.</a>
         </div>
         <div class="nav-links">
             <a href="./about.html">About</a>
@@ -31,8 +41,53 @@
         </div>
     </div>
 
-    <h1 class="headerText">Our Products</h1>
-    <h2 class="headerSubtext">Placeholder</h2>
+    <!-- hero image with text
+    <div class="hero-img";>
+        <div class="hero-text">
+            <h2>Products</h2>
+        </div>
+    </div> -->
+
+    <!-- grid of products -->
+    <div class="productsContainer">
+        <div class="productsSidebar">
+            <h3>Toilet Set</h3>
+            <h3>Toilet Lid</h3>
+            <h3>Accessories</h3>
+            <h3>Toiletries</h3>
+        </div>
+        <div class="products">
+            <div class="product">
+                <img src="./assets/products-images/product1.png">
+                <h3>Toilet</h3>
+                <h4>$5000</h4>
+            </div>
+            <div class="product">
+                <img src="./assets/products-images/product1.png">
+                <h3>Toilet</h3>
+                <h4>$5000</h4>
+            </div>
+            <div class="product">
+                <img src="./assets/products-images/product1.png">
+                <h3>Toilet</h3>
+                <h4>$5000</h4>
+            </div>
+            <div class="product">
+                <img src="./assets/products-images/product1.png">
+                <h3>Toilet</h3>
+                <h4>$5000</h4>
+            </div>
+            <div class="product">
+                <img src="./assets/products-images/product1.png">
+                <h3>Toilet</h3>
+                <h4>$5000</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="productsButton">
+        <button>Load More</button>
+    </div>
 
     <!-- footer -->
     <div class="footer">
@@ -61,8 +116,9 @@
                 </h2>
             </div>
             <div class="footerCol">
-                <h1>About Us</h1>
                 <h1>Contact Us</h1>
+                <h2>+1 (123) 456 7890</h2>
+                <h2>contact@overflo.com</h2>
             </div>
             <div class="footerCol">
                 <div class="footer-icons">

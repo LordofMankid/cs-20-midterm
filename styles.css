@@ -87,48 +87,273 @@ body {
   position: relative;
   line-height: 1.2;
   min-height: 100vh;
-  
 }
 
-.header {
-  color: white;
-  background-color: #10315B;
-  height: 6vh;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 15px;
-  place-items: center;
-  font-family: "Helvetica", sans-serif;
+/* nav bar for desktops */
+@media only screen and (min-width: 1024px) {
+  .header {
+    color: white;
+    background-color: #10315B;
+    height: 6vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    place-items: center;
+    font-family: "Zodiak-Light", sans-serif;
+  }
+
+  a {
+    margin-inline: 10px;
+    text-decoration: none;
+    color: black;
+    transition: 0.2s;
+  }
+
+  a:visited {
+    color: inherit;
+  }
+
+  a:hover {
+    color: #B1868C;
+  }
+
+  .logo>a {
+    color: white;
+    font-family: "Zodiak-ExtraBold", sans-serif;
+  }
+
+  .cart>img {
+    width: 20px;
+    filter: invert(100%);
+  }
 }
 
-.nav-links > a {
-  margin-inline: 10px;
-  text-decoration: none;
-  color: black;
-  transition: 0.2s;
+/* nav bar for mobile and tablet screens */
+@media only screen and (max-width: 1024px) {
+  .header {
+    color: white;
+    background-color: #10315B;
+    width: 100%;
+    padding: 10px;
+    place-items: center;
+    font-family: "Zodiak-Light", sans-serif;
+  }
+
+  .logo {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+
+  a {
+    margin-inline: 10px;
+    text-decoration: none;
+    color: black;
+    transition: 0.2s;
+  }
+
+  a:visited {
+    color: inherit;
+  }
+
+  a:hover {
+    color: #B1868C;
+  }
+
+  .logo>a {
+    color: white;
+    font-family: "Zodiak-ExtraBold", sans-serif;
+  }
+
+  .cart>img {
+    width: 20px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    filter: invert(100%);
+  }
 }
 
-.nav-links > a:visited {
-  color: inherit;
+/* footer for desktop */
+@media only screen and (min-width: 1024px) {
+  .footer {
+    width: 100%;
+    padding: 50px;
+    background-color: #10315B;
+  }
+
+  .footer>hr {
+    margin-inline: 5vw;
+    border: 0.5px solid white;
+  }
+
+  .footer-icons {
+    display: flex;
+  }
+
+  .footer-icons>img {
+    width: 20px;
+    margin: 5px;
+  }
+
+  .mainFooter {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .footerCol {
+    margin-inline: 5vw;
+    margin-block: 2vw;
+    color: white;
+    text-align: center;
+  }
+
+  .footerCol>h1 {
+    font-size: 22px;
+    font-family: "Zodiak-Bold", sans-serif;
+  }
+
+  .footerCol>h2 {
+    font-size: 16px;
+    font-family: "Zodiak-Light", sans-serif;
+    font-weight: normal;
+    margin-block: 10px;
+  }
+
+  .bottomFooter {
+    display: flex;
+    margin-inline: 5vw;
+    justify-content: space-between;
+  }
+
+  .bottomFooter>h3 {
+    color: white;
+    font-weight: normal;
+    font-size: 14px;
+    font-family: "Zodiak-Light", sans-serif;
+  }
 }
 
-.nav-links > a:hover {
-  color: #B1868C;
+/* footer for tablets */
+@media only screen and (max-width: 1024px) {
+  .footer {
+    width: 100%;
+    padding: 50px;
+    background-color: #10315B;
+  }
+
+  .footer > hr {
+    border: 0.5px solid white;
+  }
+
+  .footer-icons {
+    display: flex;
+  }
+
+  .footer-icons>img {
+    width: 20px;
+    margin: 5px;
+  }
+
+  .mainFooter {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footerCol {
+    margin-block: 15px;
+    color: white;
+  }
+
+  .footerCol>h1 {
+    font-size: 20px;
+    font-family: "Zodiak-Bold", sans-serif;
+  }
+
+  .footerCol>h2 {
+    font-size: 16px;
+    display: none;
+    font-family: "Zodiak-Light", sans-serif;
+  }
+
+  .footer-icons {
+    margin: auto;
+  }
+
+  .bottomFooter {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .bottomFooter > h3 {
+    color: white;
+    margin-block: 15px;
+    font-weight: normal;
+    font-size: 14px;
+    font-family: "Zodiak-Light", sans-serif;
+  }
 }
 
-.logo > a {
-  color: white;
+/* footer for mobile screens */
+@media only screen and (max-width: 600px) {
+  .footer {
+    width: 100%;
+    padding: 50px;
+    background-color: #10315B;
+  }
+
+  .footer > hr {
+    border: 0.5px solid white;
+  }
+
+  .footer-icons {
+    display: flex;
+  }
+
+  .footer-icons>img {
+    width: 20px;
+    margin: 5px;
+  }
+
+  .mainFooter {
+    display: grid;
+    align-items: center;
+  }
+
+  .footerCol {
+    margin-block: 15px;
+    color: white;
+  }
+
+  .footerCol>h1 {
+    font-size: 18px;
+  }
+
+  .footerCol>h2 {
+    display: none;
+  }
+
+  .footer-icons {
+    margin: auto;
+  }
+
+  .bottomFooter {
+    display: block;
+    justify-content: space-between;
+  }
+
+  .bottomFooter > h3 {
+    color: white;
+    margin-block: 15px;
+    font-weight: normal;
+  }
 }
 
-.cart > img {
-  width: 20px;
-  filter: invert(100%);
-}
-
+/* heading text and subtext styles */
 .headerText {
   text-align: center;
-  font-family: "Helvetica", sans-serif;
+  font-family: "Zodiak-Bold", sans-serif;
   margin-block: max(6vh, 3vw);
   margin-inline: 5vw;
   font-size: 3vh;
@@ -136,40 +361,74 @@ body {
 
 .headerSubtext {
   text-align: center;
-  font-family: "Helvetica", sans-serif;
+  font-family: "Zodiak-Regular", sans-serif;
   font-size: 2.5vh;
   font-weight: normal;
 
   /* make it closer to the headerText*/
-  margin-top: -2.5vw; 
+  margin-top: -2.5vw;
   margin-inline: 5vw;
 }
 
-.hero-img {
-  background-size: cover;
-  width: 100%;
-  height: 53vh;
-  display: grid;
-  place-items: center;
+/* hero image for desktop screens */
+@media only screen and (min-width: 1024px) {
+  .hero-img {
+    background-size: cover;
+    width: 100%;
+    height: 53vh;
+    display: grid;
+    place-items: center;
+  }
+  
+  .hero-text {
+    color: white;
+    text-align: center;
+  }
+  
+  .hero-text>h2 {
+    color: white;
+    font-family: "Zodiak-ExtraBold", sans-serif;
+    font-size: max(4vh, 8vw);
+  }
+  
+  .hero-text>h3 {
+    color: white;
+    font-family: "Zodiak-Regular", sans-serif;
+    font-size: max(2vh, 3vw);
+    font-weight: normal;
+  }
 }
 
-.hero-text {
-  color: white;
-  text-align: center;
-  font-family: "Helvetica", sans-serif;
+/* hero image for mobile and tablet screens */
+@media only screen and (max-width: 1024px) {
+  .hero-img {
+    background-size: cover;
+    width: 100%;
+    height: 40vh;
+    display: grid;
+    place-items: center;
+  }
+  
+  .hero-text {
+    color: white;
+    text-align: center;
+  }
+  
+  .hero-text>h2 {
+    color: white;
+    font-family: "Zodiak-ExtraBold", sans-serif;
+    font-size: max(7vh, 8vw);
+  }
+  
+  .hero-text>h3 {
+    color: white;
+    font-size: max(3vh, 2vw);
+    font-family: "Zodiak-Regular", sans-serif;
+    font-weight: normal;
+  }
 }
 
-.hero-text > h2 {
-  color: white;
-  font-size: max(4vh, 8vw);
-}
-
-.hero-text > h3 {
-  color: white;
-  font-size: max(2vh, 3vw);
-  font-weight: normal;
-}
-
+/* mission statement */
 .mission {
   background-color: #B1868C;
   width: 100%;
@@ -181,12 +440,14 @@ body {
 .missionHeader {
   padding: 20px;
   font-size: 2.5vh;
+  font-family: "Zodiak-ExtraBold", sans-serif;
 }
 
 .missionText {
   padding-bottom: 20px;
   font-size: 4vh;
-  margin-inline: 20vw;
+  font-family: "Zodiak-Regular", sans-serif;
+  margin-inline: 15vw;
 }
 
 .cards {
@@ -212,7 +473,7 @@ body {
   text-align: center;
 }
 
-.card > img {
+.card>img {
   text-align: center;
   margin: auto;
   margin-top: -120px;
@@ -220,210 +481,285 @@ body {
   width: 80%;
 }
 
-.card > h1 {
+.card>h1 {
   font-size: 2.7vh;
+  font-family: "Zodiak-ExtraBold", sans-serif;
 }
 
-.card > h3 {
+.card>h3 {
   padding-top: 30px;
-  font-family: "Helvetica", sans-serif;
+  font-family: "Zodiak-Regular", sans-serif;
   font-weight: normal;
   font-size: 2.3vh;
 }
 
-.testimonial {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-inline: 15vw;
-  margin-block: 5vh;
+/* carousel for desktop screens  */
+@media only screen and (min-width: 1024px) {
+  .carousel {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+    display: flex;
+    margin-block: 100px;
+  }
+  
+  .slides {
+    /* display: none; */
+    width: 80%;
+    margin-inline: 5px;
+  }
+  
+  .next,
+  .prev {
+    border: 0px solid black;
+    background-color: #10315B;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    cursor: pointer;
+    margin: auto;
+  }
+  
+  .next:hover,
+  .prev:hover {
+    background-color: #0a2345;
+  }
+  
+  .fade {
+    animation-name: fade;
+    animation-duration: 0.7s;
+  }
+  
+  @keyframes fade {
+    from {
+      opacity: .2
+    }
+  
+    to {
+      opacity: 1
+    }
+  }
 }
 
-.testimonial > img {
-  width: 12%;
-  height: 12%;
+/* carousel for mobile & tablet screens  */
+@media only screen and (max-width: 1024px) {
+  .carousel {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+    display: flex;
+    margin-block: 50px;
+  }
+  
+  .slides {
+    /* display: none; */
+    width: 100%;
+    z-index: -9;
+  }
+  
+  .next {
+    position: absolute;
+    right: 15px;
+    top: 25vw;
+    border: 0px solid black;
+    background-color: #10315B;
+    color: white;
+    width: 7vw;
+    height: 7vw;
+    border-radius: 100px;
+    cursor: pointer;
+    margin: auto;
+  }
+
+  .prev {
+    position: absolute;
+    left: 10px;
+    top: 25vw;
+    border: 0px solid black;
+    background-color: #10315B;
+    color: white;
+    width: 7vw;
+    height: 7vw;
+    border-radius: 100px;
+    cursor: pointer;
+    margin: auto;
+  }
+  
+  .next:hover,
+  .prev:hover {
+    background-color: #0a2345;
+  }
+  
+  .fade {
+    animation-name: fade;
+    animation-duration: 0.7s;
+  }
+  
+  @keyframes fade {
+    from {
+      opacity: .2
+    }
+  
+    to {
+      opacity: 1
+    }
+  }
 }
 
-.testimonialText > h1 {
-  text-align: right;
+/* testimonials for desktop screens */
+@media only screen and (min-width: 1280px) {
+  .testimonial {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-inline: 15vw;
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+  }
+  
+  .testimonial>img {
+    width: 12%;
+    height: 12%;
+  }
+  
+  .testimonialText>h1 {
+    font-family: "Zodiak-Light", sans-serif;
+    font-size: 3vh;
+    text-align: right;
+  }
+  
+  .testimonialText>h2 {
+    text-align: right;
+    font-weight: normal;
+    font-family: "Zodiak-Bold", sans-serif;
+    margin-top: 15px;
+  }
+  
+  .testimonials>hr {
+    margin-inline: 8vw;
+    border: 0.5px solid rgb(206, 206, 206);
+  }
 }
 
-.testimonialText > h2 {
-  text-align: right;
-  font-weight: normal;
-  margin-top: 15px;
+/* testimonials for mobile & mobile screens */
+@media only screen and (max-width: 1280px) {
+  .testimonial {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    margin-inline: 20vw;
+    margin-block: 5vh;
+    font-size: max(1.5vh, 1.2vw);
+  }
+  
+  .testimonial>img {
+    margin-bottom: 30px;
+    margin-top: 15px;
+  }
+  
+  .testimonialText>h1 {
+    text-align: left;
+    font-family: "Zodiak-Light", sans-serif;
+  }
+  
+  .testimonialText>h2 {
+    text-align: left;
+    margin-top: 20px;
+    font-weight: normal;
+    font-family: "Zodiak-Bold", sans-serif;
+  }
+  
+  .testimonials>hr {
+    margin-inline: 8vw;
+    border: 0.5px solid rgb(206, 206, 206);
+  }
 }
 
-.testimonials > hr {
-  margin-inline: 8vw;
-  border: 0.5px solid rgb(206, 206, 206);
-}
-
-.footer {
-  width: 100%;
-  padding: 50px;
-  background-color: #10315B;
-}
-
-.footer > hr {
-  margin-inline: 5vw;
-  border: 0.5px solid white;
-}
-
-.footer-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  font-family: "Helvetica", sans-serif;
-  font-weight: normal;
-  font-size: 1vh;
-  padding: 20px;
-}
-
-.footer-icons {
-  display: flex;
-}
-
-.footer-icons > img {
-  width: 20px;
-  margin: 5px;
-}
-
-.mainFooter {
-  display: flex;
-  justify-content: space-around;
-}
-
-.footerCol {
-  margin-inline: 5vw;
-  margin-block: 2vw;
-  color: white;
-  text-align: center;
-}
-
-.footerCol > h1 {
-  font-size: 24px;
-}
-
-.footerCol > h2 {
-  font-size: 18px;
-  font-weight: normal;
-  margin-block: 10px;
-}
-
-.bottomFooter {
-  display: flex;
-  margin-inline: 5vw;
-  justify-content: space-between;
-}
-
-.bottomFooter > h3 {
-  color: white;
-  font-weight: normal;
-}
-
-/* about us page */
-
-.about-us {
-  display: flex;
-  justify-content: space-between;
-  gap: 100px;
-  margin-inline: 20vw;
-  margin-block: 100px;
-}
-
-.services {
-  display: flex;
-  justify-content: space-between;
-  gap: 50px;
-  margin-inline: 15vw;
-  margin-block: 100px;
-}
-
-.services > img {
-  width: 70%;
+/* font faces */
+@font-face {
+  font-family: 'Zodiak-Light';
+  src: url('./fonts/Zodiak-Light.woff2') format('woff2'),
+       url('./fonts/Zodiak-Light.woff') format('woff'),
+       url('./fonts/Zodiak-Light.ttf') format('truetype');
+       font-weight: 300;
+       font-display: swap;
+       font-style: normal;
 }
 
 
-.about-us > img {
-  width: 40%;
+@font-face {
+  font-family: 'Zodiak-LightItalic';
+  src: url('./fonts/Zodiak-LightItalic.woff2') format('woff2'),
+       url('./fonts/Zodiak-LightItalic.woff') format('woff'),
+       url('./fonts/Zodiak-LightItalic.ttf') format('truetype');
+       font-weight: 300;
+       font-display: swap;
+       font-style: italic;
 }
 
-.about-us-text {
-  margin: auto;
+
+@font-face {
+  font-family: 'Zodiak-Regular';
+  src: url('./fonts/Zodiak-Regular.woff2') format('woff2'),
+       url('./fonts/Zodiak-Regular.woff') format('woff'),
+       url('./fonts/Zodiak-Regular.ttf') format('truetype');
+       font-weight: 400;
+       font-display: swap;
+       font-style: normal;
 }
 
-.about-us-text > h1 {
-  margin-block: 20px;
+
+@font-face {
+  font-family: 'Zodiak-Italic';
+  src: url('./fonts/Zodiak-Italic.woff2') format('woff2'),
+       url('./fonts/Zodiak-Italic.woff') format('woff'),
+       url('./fonts/Zodiak-Italic.ttf') format('truetype');
+       font-weight: 400;
+       font-display: swap;
+       font-style: italic;
 }
 
-.about-us-text > h2 {
-  font-weight: normal;
+
+@font-face {
+  font-family: 'Zodiak-Bold';
+  src: url('./fonts/Zodiak-Bold.woff2') format('woff2'),
+       url('./fonts/Zodiak-Bold.woff') format('woff'),
+       url('./fonts/Zodiak-Bold.ttf') format('truetype');
+       font-weight: 700;
+       font-display: swap;
+       font-style: normal;
 }
 
-/* values section */
 
-.values {
-  display: flex;
-  justify-content: space-between;
-  margin-inline: 20vw;
-  margin-block: 100px;
+@font-face {
+  font-family: 'Zodiak-BoldItalic';
+  src: url('./fonts/Zodiak-BoldItalic.woff2') format('woff2'),
+       url('./fonts/Zodiak-BoldItalic.woff') format('woff'),
+       url('./fonts/Zodiak-BoldItalic.ttf') format('truetype');
+       font-weight: 700;
+       font-display: swap;
+       font-style: italic;
 }
 
-.values > img {
-  width: 50%;
+
+@font-face {
+  font-family: 'Zodiak-Extrabold';
+  src: url('./fonts/Zodiak-Extrabold.woff2') format('woff2'),
+       url('./fonts/Zodiak-Extrabold.woff') format('woff'),
+       url('./fonts/Zodiak-Extrabold.ttf') format('truetype');
+       font-weight: 800;
+       font-display: swap;
+       font-style: normal;
 }
 
-.values-text {
-  width: 492px;
-  height: 470px;
-  background-color:#10315B;
-  padding: 40px;
-  color: white;
-}
 
-.values-text > hr {
-  margin-right: 200px;
-  margin-bottom: 100px;
-}
-
-.values-text > h2 {
-  margin-bottom: 15px;
-  font-weight: normal;
-}
-
-.our-team {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-inline: 20vw;
-  font-family: "Georgia", serif;
-}
-
-.teamCard {
-  flex: 1 1 auto;
-  margin-inline: 5px;
-  margin-block: 50px;
-  padding: 40px;
-
-  background-color: #10315B;
-  width: 200px;
-  color: white;
-
-  text-align: center;
-}
-
-.teamCard > img {
-  margin-bottom: 50px;
-}
-
-.teamCard > h1 {
-  font-size: 2.7vh;
-}
-
-.teamCard > h3 {
-  padding-top: 15px;
-  font-family: "Helvetica", sans-serif;
-  font-weight: normal;
-  font-size: 2.3vh;
+@font-face {
+  font-family: 'Zodiak-ExtraboldItalic';
+  src: url('./fonts/Zodiak-ExtraboldItalic.woff2') format('woff2'),
+       url('./fonts/Zodiak-ExtraboldItalic.woff') format('woff'),
+       url('./fonts/Zodiak-ExtraboldItalic.ttf') format('truetype');
+       font-weight: 800;
+       font-display: swap;
+       font-style: italic;
 }
