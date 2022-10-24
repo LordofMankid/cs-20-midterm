@@ -10,8 +10,6 @@ $(document).ready(function () {
 
 
 function addItem(item) {
-
-    
         var itemQuantity = $(item).siblings("p").text(); // or var clickedBtnID = this.id
         var element = $(item);
         itemQuantity++;
@@ -118,18 +116,6 @@ function calculateSubtotal() {
             subtotal += price * quantity;
         }
     }
-    
-    /*
-    var numItem = $('.item');
-    var itemPrices = $('.item-price');
-    console.log("hi");
-    for (i = 0; i < numItem.length; i++) {
-        numItem[i] = $(".itemQuantity:eq(" + i + ")").text();
-
-        itemPrices[i] = parseNonNumbers($(".item-price:eq(" + i + ")").text());
-
-        subtotal += calculateItemPrice(numItem[i], itemPrices[i]);
-    }*/
 
      return subtotal;
 
@@ -162,7 +148,7 @@ function verifyData() {
         verifyCardNumber(cardNumber) == true &&
         verifyExpiration(expirDate) == true  &&
         verifyCVV(cvv) == true) {
-            $(location).prop('href', "./index.html");
+            $(location).prop('href', "./thankyou.html");
         } 
         
 }
@@ -233,6 +219,9 @@ function verifyCVV(input) {
 function printCartItems() {
     for(i = 1; i < sessionStorage.length; i++) {
         var cartItem = JSON.parse(sessionStorage.getItem(sessionStorage.key(i)));
+        if (cartItem == 1) {
+            continue;
+        }
         if(cartItem.quantity != 0) {
             createItem(cartItem);
         }

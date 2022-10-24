@@ -85,10 +85,22 @@
     .filter {
       cursor: pointer;
     }
+
+    .allProductsShown {
+      display: grid;
+      place-items: center;
+      display: none;
+    }
+
+    .allProductsShown > h2 {
+      font-size: 16px;
+      color: rgb(188, 188, 188);
+      font-family: "Zodiak-Regular", sans-serif;
+    }
 }
   
 /* products page for mobile and tablet screens */
-  @media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     .productsContainer {
       margin: 10vw;
     }
@@ -109,6 +121,7 @@
   
     .product > img {
       cursor: pointer;
+      width: 100%;
     }
 
     .product > button {
@@ -158,25 +171,41 @@
     .productsButton > button:active {
       background-color:#072144;
     }
+
+    .productModal {
+      display: none;
+    }
+
+    .allProductsShown {
+      display: grid;
+      place-items: center;
+      display: none;
+    }
+
+    .allProductsShown > h2 {
+      font-size: 16px;
+      color: rgb(188, 188, 188);
+      font-family: "Zodiak-Regular", sans-serif;
+    }
 }
 
 /* modal for desktop */
+@media only screen and (min-width: 768px) and (min-height: 750px) {
   .modal-container {
     position: fixed;
     bottom: calc((100vh - 800px) / 2);
     left: calc((100vw - 800px) / 2);
-    background-color: rgba(0, 0, 0, 0.75);
-    width: 800px;
-    height: 800px;
-    transition: 0.5s ease-in;
+    background-color: rgba(0, 0, 0, 1);
+    width: 750px;
+    height: 750px;
+    overflow-y: scroll;
   }
-
+  
   /* ----- images ----- */
   img {
     max-width: 100%;
-    
   }
-
+  
   .toilet-image img {
     position: absolute;
     left: 3.75%;
@@ -184,144 +213,140 @@
     top: 10.75%;
     bottom: 41.25%;
   }
-
+  
   /* ----- text ----- */
   .modal-container h2 {
     position: absolute;
-
+  
     left: 57.5%;
     right: 5.75%;
     top: 100px;
     bottom: 78.25%;
-
-    font-family: 'Zodiak';
+  
+    font-family: 'Zodiak-Regular', sans-serif;
     font-style: normal;
-    font-weight: 400;
     font-size: 20px;
     line-height: 26.8px;
     text-align: center;
-
+  
     color: #FFFFFF;
   }
-
+  
   .modal-container h1 {
     position: absolute;
     left: 57.5%;
     right: 5.75%;
     top: 16.75%;
     bottom: 78.25%;
-
-    font-family: 'Zodiak';
+  
+    font-family: 'Zodiak-Bold', sans-serif;
     font-style: normal;
-    font-weight: 540;
-    font-size: 30px;
+    font-size: 27px;
     line-height: 40px;
     text-align: center;
-
+  
     color: #FFFFFF;
     
   }
-
+  
   #price {
     position: absolute;
     left: 57.5%;
     right: 35.25%;
     top: 33.12%;
     bottom: 63.5%;
-
-    font-family: 'Zodiak';
-    font-style: normal;
-    font-weight: 540;
+  
+    font-family: 'Zodiak-Regular', sans-serif;
     font-size: 20px;
     line-height: 27px;
     /* identical to box height */
-
+  
     text-align: center;
-
+  
     color: #FFFFFF;
   }
-
+  
   #material {
     position: absolute;
     left: 57.5%;
     right: 24.88%;
     top: 39%;
     bottom: 58.38%;
-
-    font-family: 'Zodiak';
+  
+    font-family: 'Zodiak-Regular', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 21px;
-
+  
     color: #FFFFFF;
   }
-
+  
   #dimensions {
     position: absolute;
     left: 57.5%;
     right: 18.75%;
     top: 44.25%;
     bottom: 53.12%;
-
-    font-family: 'Zodiak';
+  
+    font-family: 'Zodiak-Regular', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 21px;
-
+  
     color: #FFFFFF;
   }
-
+  
   #year {
     position: absolute;
     left: 57.5%;
     right: 31.88%;
     top: 49.25%;
     bottom: 48.12%;
-
-    font-family: 'Zodiak';
+  
+    font-family: 'Zodiak-Regular', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 21px;
-
+  
     color: #FFFFFF;
   }
-
+  
   #about {
     position: absolute;
     left: 3.75%;
     right: 73.12%;
     top: 62.5%;
     bottom: 34.12%;
-
-    font-family: 'Zodiak';
+  
+    font-family: 'Zodiak-Regular', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 27px;
     /* identical to box height */
-
+  
     color: #FFFFFF;
   }
-
+  
   #about_info {
     position: absolute;
     left: 3.88%;
     right: 5%;
     top: 68%;
     bottom: 22.5%;
-
-    font-family: 'Zodiak';
+  
+    font-family: 'Zodiak-Regular', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 19px;
-
+  
     color: #FFFFFF;
   }
-
+  
   /* ----- other elements ----- */
   .modal-container > hr {
     position: absolute;
@@ -329,10 +354,10 @@
     right: 5%;
     top: 29.38%;
     bottom: 70.62%;
-
+  
     border: 1px solid #FFFFFF;
   }
-
+  
   #close {
     position: absolute;
     left: 1.25%;
@@ -340,132 +365,308 @@
     top: 1.25%;
     bottom: 93%;
   }
-
+  
   #rating {
     position: absolute;
     left: 67.88%;
     right: 15.12%;
     top: 25.5%;
     bottom: 74.38%;
-
+  
     width: 136px;
     height: 24px;
   }
-
+  
   .addToCart {
     position: absolute;
     left: 73.5%;
     right: 4.98%;
     top: 87.62%;
     bottom: 5.62%;
-
+  
     width: 172.12px;
     height: 54px;
-
+  
     font-family: 'Zodiak';
     font-style: normal;
     font-weight: 400;
     font-size: 16.2px;
     line-height: 22px;
     /* identical to box height */
-
+  
     text-align: center;
-
+  
     color: #FFFFFF;
     background-color: #3F70AA;
     border: none;
   }
-
+  
   button.addToCart:hover{
     cursor: pointer;
     background-color: #19457A;
   }
-  
+}
+
+@media only screen and (max-width: 768px) {
+  .modal-container {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 99;
+  }
+
+  #close {
+    /* filter: brightness(0%); */
+    padding: 20px;
+    background-color:#153968;
+  }
+
+  #close > img {
+    width: 5%;
+  }
+
+  .toilet-image > img {
+    width: 100%;
+  }
+
+  .modal-container > h2 {
+    font-family: "Zodiak-Regular", sans-serif;
+    color:#072144;
+    margin-inline: 20px;
+    margin-block: 20px;
+    font-size: 20px;
+  }
+
+  .modal-container > h1 {
+    font-family: "Zodiak-Bold", sans-serif;
+    margin-inline: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  .modal-container > hr {
+    margin-inline: 20px;
+  }
+
+  #rating {
+    filter: brightness(0%);
+    margin-inline: 20px;
+    margin-bottom: 20px;
+  }
+
+  #price, #material, #dimensions, #year {
+    margin-inline: 20px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-family: "Zodiak-Regular", sans-serif;
+  }
+
+  #price {
+    font-size: 18px;
+    margin-block: 20px;
+  }
+
+  #about {
+    font-family: "Zodiak-Bold", sans-serif;
+    font-size: 18px;
+  }
+
+  #about_info > li {
+    font-family: "Zodiak-Regular", sans-serif;
+    margin-inline: 20px;
+  }
+
+  .addToCart {
+    margin: 20px;
+    padding: 10px;
+    border: 0px solid black;
+    color: white;
+    font-family: "Zodiak-Regular", sans-serif;
+    background-color: #072144;
+  }
+
+  .addToCart:hover{
+    cursor: pointer;
+    background-color: #19457A;
+  }
+}
+
+@media only screen and (max-height: 768px) {
+  .modal-container {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 99;
+  }
+
+  #close {
+    /* filter: brightness(0%); */
+    padding: 10px;
+    background-color:#153968;
+  }
+
+  #close > img {
+    width: 2%;
+  }
+
+  .toilet-image > img {
+    width: 50%;
+  }
+
+  .modal-container > h2 {
+    font-family: "Zodiak-Regular", sans-serif;
+    color:#072144;
+    margin-inline: 20px;
+    margin-block: 20px;
+    font-size: 20px;
+  }
+
+  .modal-container > h1 {
+    font-family: "Zodiak-Bold", sans-serif;
+    margin-inline: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  .modal-container > hr {
+    margin-inline: 20px;
+  }
+
+  #rating {
+    filter: brightness(0%);
+    margin-inline: 20px;
+    margin-bottom: 20px;
+  }
+
+  #price, #material, #dimensions, #year {
+    margin-inline: 20px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-family: "Zodiak-Regular", sans-serif;
+  }
+
+  #price {
+    font-size: 18px;
+    margin-block: 20px;
+  }
+
+  #about {
+    font-family: "Zodiak-Bold", sans-serif;
+    font-size: 18px;
+  }
+
+  #about_info > li {
+    font-family: "Zodiak-Regular", sans-serif;
+    margin-inline: 20px;
+  }
+
+  .addToCart {
+    margin: 20px;
+    padding: 10px;
+    border: 0px solid black;
+    color: white;
+    font-family: "Zodiak-Regular", sans-serif;
+    background-color: #072144;
+  }
+
+  .addToCart:hover{
+    cursor: pointer;
+    background-color: #19457A;
+  }
+}
+
 /* font faces */
 @font-face {
-    font-family: 'Zodiak-Light';
-    src: url('./fonts/Zodiak-Light.woff2') format('woff2'),
-         url('./fonts/Zodiak-Light.woff') format('woff'),
-         url('./fonts/Zodiak-Light.ttf') format('truetype');
-         font-weight: 300;
-         font-display: swap;
-         font-style: normal;
-  }
-  
-  
-  @font-face {
-    font-family: 'Zodiak-LightItalic';
-    src: url('./fonts/Zodiak-LightItalic.woff2') format('woff2'),
-         url('./fonts/Zodiak-LightItalic.woff') format('woff'),
-         url('./fonts/Zodiak-LightItalic.ttf') format('truetype');
-         font-weight: 300;
-         font-display: swap;
-         font-style: italic;
-  }
-  
-  
-  @font-face {
-    font-family: 'Zodiak-Regular';
-    src: url('./fonts/Zodiak-Regular.woff2') format('woff2'),
-         url('./fonts/Zodiak-Regular.woff') format('woff'),
-         url('./fonts/Zodiak-Regular.ttf') format('truetype');
-         font-weight: 400;
-         font-display: swap;
-         font-style: normal;
-  }
-  
-  
-  @font-face {
-    font-family: 'Zodiak-Italic';
-    src: url('./fonts/Zodiak-Italic.woff2') format('woff2'),
-         url('./fonts/Zodiak-Italic.woff') format('woff'),
-         url('./fonts/Zodiak-Italic.ttf') format('truetype');
-         font-weight: 400;
-         font-display: swap;
-         font-style: italic;
-  }
-  
-  
-  @font-face {
-    font-family: 'Zodiak-Bold';
-    src: url('./fonts/Zodiak-Bold.woff2') format('woff2'),
-         url('./fonts/Zodiak-Bold.woff') format('woff'),
-         url('./fonts/Zodiak-Bold.ttf') format('truetype');
-         font-weight: 700;
-         font-display: swap;
-         font-style: normal;
-  }
-  
-  
-  @font-face {
-    font-family: 'Zodiak-BoldItalic';
-    src: url('./fonts/Zodiak-BoldItalic.woff2') format('woff2'),
-         url('./fonts/Zodiak-BoldItalic.woff') format('woff'),
-         url('./fonts/Zodiak-BoldItalic.ttf') format('truetype');
-         font-weight: 700;
-         font-display: swap;
-         font-style: italic;
-  }
-  
-  
-  @font-face {
-    font-family: 'Zodiak-Extrabold';
-    src: url('./fonts/Zodiak-Extrabold.woff2') format('woff2'),
-         url('./fonts/Zodiak-Extrabold.woff') format('woff'),
-         url('./fonts/Zodiak-Extrabold.ttf') format('truetype');
-         font-weight: 800;
-         font-display: swap;
-         font-style: normal;
-  }
-  
-  
-  @font-face {
-    font-family: 'Zodiak-ExtraboldItalic';
-    src: url('./fonts/Zodiak-ExtraboldItalic.woff2') format('woff2'),
-         url('./fonts/Zodiak-ExtraboldItalic.woff') format('woff'),
-         url('./fonts/Zodiak-ExtraboldItalic.ttf') format('truetype');
-         font-weight: 800;
-         font-display: swap;
-         font-style: italic;
-  }
-  
+  font-family: 'Zodiak-Light';
+  src: url('./fonts/Zodiak-Light.woff2') format('woff2'),
+        url('./fonts/Zodiak-Light.woff') format('woff'),
+        url('./fonts/Zodiak-Light.ttf') format('truetype');
+        font-weight: 300;
+        font-display: swap;
+        font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Zodiak-LightItalic';
+  src: url('./fonts/Zodiak-LightItalic.woff2') format('woff2'),
+        url('./fonts/Zodiak-LightItalic.woff') format('woff'),
+        url('./fonts/Zodiak-LightItalic.ttf') format('truetype');
+        font-weight: 300;
+        font-display: swap;
+        font-style: italic;
+}
+
+
+@font-face {
+  font-family: 'Zodiak-Regular';
+  src: url('./fonts/Zodiak-Regular.woff2') format('woff2'),
+        url('./fonts/Zodiak-Regular.woff') format('woff'),
+        url('./fonts/Zodiak-Regular.ttf') format('truetype');
+        font-weight: 400;
+        font-display: swap;
+        font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Zodiak-Italic';
+  src: url('./fonts/Zodiak-Italic.woff2') format('woff2'),
+        url('./fonts/Zodiak-Italic.woff') format('woff'),
+        url('./fonts/Zodiak-Italic.ttf') format('truetype');
+        font-weight: 400;
+        font-display: swap;
+        font-style: italic;
+}
+
+
+@font-face {
+  font-family: 'Zodiak-Bold';
+  src: url('./fonts/Zodiak-Bold.woff2') format('woff2'),
+        url('./fonts/Zodiak-Bold.woff') format('woff'),
+        url('./fonts/Zodiak-Bold.ttf') format('truetype');
+        font-weight: 700;
+        font-display: swap;
+        font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Zodiak-BoldItalic';
+  src: url('./fonts/Zodiak-BoldItalic.woff2') format('woff2'),
+        url('./fonts/Zodiak-BoldItalic.woff') format('woff'),
+        url('./fonts/Zodiak-BoldItalic.ttf') format('truetype');
+        font-weight: 700;
+        font-display: swap;
+        font-style: italic;
+}
+
+
+@font-face {
+  font-family: 'Zodiak-Extrabold';
+  src: url('./fonts/Zodiak-Extrabold.woff2') format('woff2'),
+        url('./fonts/Zodiak-Extrabold.woff') format('woff'),
+        url('./fonts/Zodiak-Extrabold.ttf') format('truetype');
+        font-weight: 800;
+        font-display: swap;
+        font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Zodiak-ExtraboldItalic';
+  src: url('./fonts/Zodiak-ExtraboldItalic.woff2') format('woff2'),
+        url('./fonts/Zodiak-ExtraboldItalic.woff') format('woff'),
+        url('./fonts/Zodiak-ExtraboldItalic.ttf') format('truetype');
+        font-weight: 800;
+        font-display: swap;
+        font-style: italic;
+}

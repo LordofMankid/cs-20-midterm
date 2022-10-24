@@ -23,6 +23,7 @@
         integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <script src="./javascript/products.js"></script>
     <script src="./javascript/productsModal.js"></script>
+    <script src="./javascript/populateSessionStorage.js"></script>
     
     <!-- header -->
     <div class="header">
@@ -42,12 +43,12 @@
         </div>
     </div>
 
-    <!-- hero image with text
+    <!-- hero image with text -->
     <div class="hero-img";>
         <div class="hero-text">
             <h2>Products</h2>
         </div>
-    </div> -->
+    </div>
 
     <!-- grid of products -->
     <div class="productsContainer">
@@ -65,7 +66,7 @@
                     <h3>Toilet Set</h3>
                     <h4>$5000</h4>
                 </div>
-                <button onclick="showModal()">More Info</button>
+                <button onclick="showModal('toiletSet')">More Info</button>
             </div>
             <div class="product" id="toiletPaper">
                 <img src="./assets/products-images/product2.png" onclick="showModal('toiletPaper')">
@@ -73,7 +74,7 @@
                     <h3>Toilet Paper</h3>
                     <h4>$15</h4>
                 </div>
-                <button onclick="showModal()">More Info</button>
+                <button onclick="showModal('toiletPaper')">More Info</button>
             </div>
             <div class="product" id="showerHead">
                 <img src="./assets/products-images/product3.png" onclick="showModal('showerHead')">
@@ -81,7 +82,7 @@
                     <h3>Shower Head</h3>
                     <h4>$200</h4>
                 </div>
-                <button onclick="showModal()">More Info</button>
+                <button onclick="showModal('showerHead')">More Info</button>
             </div>
             <div class="product" id="toiletPaperHolder" style="display: none">
                 <img src="./assets/products-images/product4.png" onclick="showModal('toiletPaperHolder')">
@@ -89,7 +90,7 @@
                     <h3>Toilet Paper Holder</h3>
                     <h4>$100</h4>
                 </div>
-                <button onclick="showModal()">More Info</button>
+                <button onclick="showModal('toiletPaperHolder')">More Info</button>
             </div>
             <div class="product" id="toothbrushes" style="display: none">
                 <img src="./assets/products-images/product5.png" onclick="showModal('toothbrushes')">
@@ -97,14 +98,13 @@
                     <h3>Wooden Toothbrushes</h3>
                     <h4>$5</h4>
                 </div>
-                <button onclick="showModal()">More Info</button>
+                <button onclick="showModal('toothbrushes')">More Info</button>
             </div>
         </div>
     </div>
 
     <div class="productModal" id="modalId">
         <section class = "modal-container">
-
             <div id="close" onclick="hideModal()" style="cursor: pointer">
               <img src="./assets/icons/x.svg" alt="x">
             </div>
@@ -131,13 +131,10 @@
             </ul>
             
             <button type="button" class="addToCart" onclick="addToCart()">Add to Cart</button>
-      
             </section>
     </div>
 
-    <!-- <button onclick="addToCart()">Add to Cart</button> -->
-
-    <div class="productsButton">
+    <div class="productsButton" id="productsButton">
         <button onclick="loadMore()">Load More</button>
     </div>
 
@@ -146,29 +143,29 @@
         <hr>
         <div class="mainFooter">
             <div class="footerCol">
-                <h1>Shop</h1>
-                <h2>Toilet</h2>
-                <h2>Faucets</h2>
-                <h2>Sink</h2>
-                <h2>Toilet Paper</h2>
-                <h2>Bidet</h2>
+                <h1><a href="./products.html">Shop</a></h1>
+                <h2><a href="./products.html">Toilet</a></h2>
+                <h2><a href="./products.html">Faucets</a></h2>
+                <h2><a href="./products.html">Sink</a></h2>
+                <h2><a href="./products.html">Toilet Paper</a></h2>
+                <h2><a href="./products.html">Bidet</a></h2>
             </div>
             <div class="footerCol">
-                <h1>Services</h1>
-                <h2>Maintenance</h2>
-                <h2>Delivery</h2>
-                <h2>Cleaning</h2>
-                <h2>Installing</h2>
+                <h1><a href="./services.html">Services</a></h1>
+                <h2><a href="./services.html">Maintenance</a></h2>
+                <h2><a href="./services.html">Delivery</a></h2>
+                <h2><a href="./services.html">Cleaning</a></h2>
+                <h2><a href="./services.html">Installing</a></h2>
             </div>
             <div class="footerCol">
-                <h1>Address</h1>
+                <h1><a href="./contacts.html">Address</a></h1>
                 <h2>34 Clean Rd.<br>
                     Somerville, MA<br>
                     02144 USA<br>
                 </h2>
             </div>
             <div class="footerCol">
-                <h1>Contact Us</h1>
+                <h1><a href="./contacts.html">Contact Us</a></h1>
                 <h2>+1 (123) 456 7890</h2>
                 <h2>contact@overflo.com</h2>
             </div>
