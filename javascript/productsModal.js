@@ -26,6 +26,10 @@ function showModal(id) {
 
 function hideModal() {
     var modal = document.getElementsByClassName("productModal")[0];
+    var addToCartButton = document.getElementsByClassName("addToCart")[0];
+    addToCartButton.innerHTML = "Add to Cart";
+    addToCartButton.style.backgroundColor = "#3F70AA";
+    addToCartButton.style.cursor = "pointer";
     modal.style.display = "none";
 }
 
@@ -42,6 +46,7 @@ function filter(product) {
         for (i = 0; i < filteredOut.length; i++) {
             filteredOut[i].style.display = "block";
         }
+        document.getElementById("productsButton").style.display = "none";
     }
 
     if (product == "toiletSet") {
@@ -110,7 +115,6 @@ function loadMore() {
 
 function addToCart() {
     // get item ID
-    
     var id = $('.productModal').attr('id');
     
     // update quantity for the item in sessionStorage
@@ -121,4 +125,9 @@ function addToCart() {
             sessionStorage.setItem(id, JSON.stringify(sessionStorageItem));
         }
     }
+
+    var addToCartButton = document.getElementsByClassName("addToCart")[0];
+    addToCartButton.innerHTML = "Added to Cart";
+    addToCartButton.style.backgroundColor = "#B1868C";
+    addToCartButton.style.cursor = "auto";
 }
