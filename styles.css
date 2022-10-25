@@ -396,13 +396,13 @@ a:visited {
   .hero-text>h2 {
     color: white;
     font-family: "Zodiak-ExtraBold", sans-serif;
-    font-size: 5vw;
+    font-size: max(4vh, 8vw);
   }
   
   .hero-text>h3 {
     color: white;
     font-family: "Zodiak-Regular", sans-serif;
-    font-size: 3vw;
+    font-size: max(2vh, 3vw);
     font-weight: normal;
   }
 }
@@ -412,7 +412,7 @@ a:visited {
   .hero-img {
     background-size: cover;
     width: 100%;
-    height: 40vh;
+    height: 500px;
     display: grid;
     place-items: center;
   }
@@ -425,12 +425,12 @@ a:visited {
   .hero-text>h2 {
     color: white;
     font-family: "Zodiak-ExtraBold", sans-serif;
-    font-size: max(7vh, 8vw);
+    font-size: 58px
   }
   
   .hero-text>h3 {
     color: white;
-    font-size: max(3vh, 2vw);
+    font-size: 40px;
     font-family: "Zodiak-Regular", sans-serif;
     font-weight: normal;
   }
@@ -447,13 +447,13 @@ a:visited {
 
 .missionHeader {
   padding: 20px;
-  font-size: 2.5vh;
+  font-size: 27px;
   font-family: "Zodiak-ExtraBold", sans-serif;
 }
 
 .missionText {
   padding-bottom: 20px;
-  font-size: 4vh;
+  font-size: 30px;
   font-family: "Zodiak-Regular", sans-serif;
   margin-inline: 15vw;
 }
@@ -490,7 +490,7 @@ a:visited {
 }
 
 .card>h1 {
-  font-size: 2.7vh;
+  font-size: 24px;
   font-family: "Zodiak-ExtraBold", sans-serif;
 }
 
@@ -498,7 +498,7 @@ a:visited {
   padding-top: 30px;
   font-family: "Zodiak-Regular", sans-serif;
   font-weight: normal;
-  font-size: 2.3vh;
+  font-size: 20px;
 }
 
 /* carousel for desktop screens  */
@@ -633,7 +633,7 @@ a:visited {
   
   .testimonialText>h1 {
     font-family: "Zodiak-Light", sans-serif;
-    font-size: 3vh;
+    font-size: 24px;
     text-align: right;
   }
   
@@ -658,7 +658,7 @@ a:visited {
     text-align: center;
     margin-inline: 20vw;
     margin-block: 5vh;
-    font-size: max(1.5vh, 1.2vw);
+    font-size: 12px;
   }
   
   .testimonial>img {

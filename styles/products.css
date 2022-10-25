@@ -190,7 +190,7 @@
 }
 
 /* modal for desktop */
-@media only screen and (min-width: 768px) and (min-height: 750px) {
+@media only screen and (min-width: 768px) {
   .modal-container {
     position: fixed;
     bottom: calc((100vh - 800px) / 2);
@@ -431,94 +431,6 @@
 
   .toilet-image > img {
     width: 100%;
-  }
-
-  .modal-container > h2 {
-    font-family: "Zodiak-Regular", sans-serif;
-    color:#072144;
-    margin-inline: 20px;
-    margin-block: 20px;
-    font-size: 20px;
-  }
-
-  .modal-container > h1 {
-    font-family: "Zodiak-Bold", sans-serif;
-    margin-inline: 20px;
-    margin-bottom: 20px;
-    font-size: 20px;
-  }
-
-  .modal-container > hr {
-    margin-inline: 20px;
-  }
-
-  #rating {
-    filter: brightness(0%);
-    margin-inline: 20px;
-    margin-bottom: 20px;
-  }
-
-  #price, #material, #dimensions, #year {
-    margin-inline: 20px;
-    margin-bottom: 5px;
-    font-size: 14px;
-    font-family: "Zodiak-Regular", sans-serif;
-  }
-
-  #price {
-    font-size: 18px;
-    margin-block: 20px;
-  }
-
-  #about {
-    font-family: "Zodiak-Bold", sans-serif;
-    font-size: 18px;
-  }
-
-  #about_info > li {
-    font-family: "Zodiak-Regular", sans-serif;
-    margin-inline: 20px;
-  }
-
-  .addToCart {
-    margin: 20px;
-    padding: 10px;
-    border: 0px solid black;
-    color: white;
-    font-family: "Zodiak-Regular", sans-serif;
-    background-color: #072144;
-  }
-
-  .addToCart:hover{
-    cursor: pointer;
-    background-color: #19457A;
-  }
-}
-
-@media only screen and (max-height: 768px) {
-  .modal-container {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    background-color: white;
-    width: 100vw;
-    height: 100vh;
-    overflow-y: auto;
-    z-index: 99;
-  }
-
-  #close {
-    /* filter: brightness(0%); */
-    padding: 10px;
-    background-color:#153968;
-  }
-
-  #close > img {
-    width: 2%;
-  }
-
-  .toilet-image > img {
-    width: 50%;
   }
 
   .modal-container > h2 {

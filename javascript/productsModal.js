@@ -21,7 +21,10 @@ function showModal(id) {
         htmlDescription += '<li> ' + description[i] + '</li>';
     }
     document.getElementById('about_info').innerHTML = htmlDescription;
-    
+    var addToCartButton = document.getElementsByClassName("addToCart")[0];
+    addToCartButton.innerHTML = "Add to Cart";
+    addToCartButton.style.backgroundColor = "#3F70AA";
+    addToCartButton.style.cursor = "pointer";
 }
 
 function hideModal() {
